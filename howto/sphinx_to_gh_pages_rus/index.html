@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/meltyminds/configure_marlin/">
+        <link rel="canonical" href="https://example.com/howto/sphinx_to_gh_pages_rus/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Marlin Configuration Notes - lejbronika</title>
+        <title>Публикация sphinx-документации на GitHub Pages - lejbronika</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#marlin-configuration-notes" class="md-skip">
+        <a href="#sphinx-github-pages" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Marlin Configuration Notes
+              Публикация sphinx-документации на GitHub Pages
             
           </span>
         </div>
@@ -195,15 +195,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../meltyminds/" class="md-tabs__link">
         Melty Minds
       </a>
     </li>
@@ -229,13 +227,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../howto/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         How To
       </a>
     </li>
@@ -268,8 +268,6 @@
         <div class="md-main__inner md-grid">
           
             
-              
-                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -377,14 +375,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -400,7 +396,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Melty Minds</a>
+          <a href="../../meltyminds/">Melty Minds</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -421,141 +417,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Marlin Configuration Notes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
         Marlin Configuration Notes
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configurationh" class="md-nav__link">
-    Configuration.h
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration.h">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-info" class="md-nav__link">
-    @section info
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-machine" class="md-nav__link">
-    @section machine
-  </a>
-  
-    <nav class="md-nav" aria-label="@section machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-extruder" class="md-nav__link">
-    @section extruder
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-temperature" class="md-nav__link">
-    @section temperature
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-homing" class="md-nav__link">
-    @section homing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-motion" class="md-nav__link">
-    @section motion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mix" class="md-nav__link">
-    MIX
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-calibrate" class="md-nav__link">
-    @section calibrate:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-extras" class="md-nav__link">
-    @section extras:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-lcd" class="md-nav__link">
-    @section lcd:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration_advh" class="md-nav__link">
-    Configuration_adv.h
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -717,12 +583,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -740,7 +608,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../howto/">How To</a>
+          <a href="../">How To</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -763,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/sphinx_to_gh_pages_eng/" class="md-nav__link">
+      <a href="../sphinx_to_gh_pages_eng/" class="md-nav__link">
         Publish sphinx-generated docs on GitHub Pages
       </a>
     </li>
@@ -775,11 +643,121 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../howto/sphinx_to_gh_pages_rus/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Публикация sphinx-документации на GitHub Pages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Публикация sphinx-документации на GitHub Pages
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Настроить основной репозиторий
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx-" class="md-nav__link">
+    Создать sphinx-проект в основном репозитории
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Настроить папку для сборки
+  </a>
+  
+    <nav class="md-nav" aria-label="Настроить папку для сборки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Создать папку
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    Клонировать репозиторий в папку html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Создть ветку для публикации
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Настроить git для публикации
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Изменить Makefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nojekyll" class="md-nav__link">
+    Добавить .nojekyll файл
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Настройка на другой машине
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -895,8 +873,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -916,86 +892,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurationh" class="md-nav__link">
-    Configuration.h
+  <a href="#_1" class="md-nav__link">
+    Настроить основной репозиторий
   </a>
   
-    <nav class="md-nav" aria-label="Configuration.h">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx-" class="md-nav__link">
+    Создать sphinx-проект в основном репозитории
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Настроить папку для сборки
+  </a>
+  
+    <nav class="md-nav" aria-label="Настроить папку для сборки">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#section-info" class="md-nav__link">
-    @section info
+  <a href="#_3" class="md-nav__link">
+    Создать папку
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#section-machine" class="md-nav__link">
-    @section machine
-  </a>
-  
-    <nav class="md-nav" aria-label="@section machine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-extruder" class="md-nav__link">
-    @section extruder
+  <a href="#html" class="md-nav__link">
+    Клонировать репозиторий в папку html
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#section-temperature" class="md-nav__link">
-    @section temperature
+  <a href="#_4" class="md-nav__link">
+    Создть ветку для публикации
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#section-homing" class="md-nav__link">
-    @section homing
+  <a href="#git" class="md-nav__link">
+    Настроить git для публикации
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-motion" class="md-nav__link">
-    @section motion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mix" class="md-nav__link">
-    MIX
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-calibrate" class="md-nav__link">
-    @section calibrate:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-extras" class="md-nav__link">
-    @section extras:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-lcd" class="md-nav__link">
-    @section lcd:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1005,8 +947,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration_advh" class="md-nav__link">
-    Configuration_adv.h
+  <a href="#makefile" class="md-nav__link">
+    Изменить Makefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nojekyll" class="md-nav__link">
+    Добавить .nojekyll файл
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Настройка на другой машине
   </a>
   
 </li>
@@ -1025,20 +981,18 @@
                 
 
   
-  
 
-
-  <nav class="md-tags" hidden>
+  <nav class="md-tags" >
     
       
-        <a href="../../tags/#3d-print" class="md-tag">
-          3d-print
+        <a href="../../tags/#git" class="md-tag">
+          git
         </a>
       
     
       
-        <a href="../../tags/#marlin" class="md-tag">
-          Marlin
+        <a href="../../tags/#sphinx" class="md-tag">
+          sphinx
         </a>
       
     
@@ -1046,115 +1000,85 @@
 
 
 
-<h1 id="marlin-configuration-notes">Marlin Configuration Notes<a class="headerlink" href="#marlin-configuration-notes" title="Permanent link">#</a></h1>
-<blockquote>
-<p>Heisenberg_0.0.1</p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Ultimaker/Ultimaker2Marlin">Ultimaker 2 Marlin example</a></li>
-</ul>
-<h2 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h2>
-<h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
-<pre><code>- STRING_CONFIG_H_AUTHOR "lejbron"
-- SHOW_CUSTOM_BOOTSCREEN
+<h1 id="sphinx-github-pages">Публикация sphinx-документации на GitHub Pages<a class="headerlink" href="#sphinx-github-pages" title="Permanent link">#</a></h1>
+<p>Первоисточник доступен по <a href="https://daler.github.io/sphinxdoc-test/includeme.html">ссылке</a>.</p>
+<h2 id="_1">Настроить основной репозиторий<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<pre><code>mkdir sphinxdoc-test
+cd sphinxdoc-test
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:___/sphinxdoc-test.git
+git push origin master
 </code></pre>
-<h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
-<pre><code>- MOTHERBOARD BOARD_MKS_GEN_13
-- BAUDRATE 25000
-- CUSTOM_MACHINE_NAME "melty"
+<h2 id="sphinx-">Создать sphinx-проект в основном репозитории<a class="headerlink" href="#sphinx-" title="Permanent link">#</a></h2>
+<pre><code>mkdir sphinxdoc-test/docs
+cd docs
+sphinx-quickstart
 </code></pre>
-<ul>
-<li><a href="https://raw.githubusercontent.com/makerbase-mks/MKS-GEN/master/hardware/MKS%20GEN%20V1.4_004/MKS%20GEN%20V1.4_004%20PIN.pdf">MKS GEN 1.4 pins</a></li>
-<li><a href="https://github.com/makerbase-mks/MKS-GEN">MKS GEN 1.4 GitHub repo</a></li>
-</ul>
-<h5 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h5>
-<pre><code>- EXTRUDERS 1
-- DEFAULT_NOMIANL_FILAMENT_DIA 1.75
+<h2 id="_2">Настроить папку для сборки<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>Для сборки сайта с документацией и дальнейшей публикацией на GitHub Pages
+необходимо создать ещё одну отдельную папку и настроить её должным образом.</p>
+<h3 id="_3">Создать папку<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<pre><code>cd ..
+mkdir sphixdoc-test-docs
+cd sphixdoc-test-docs
 </code></pre>
-<h5 id="section-temperature">@section temperature<a class="headerlink" href="#section-temperature" title="Permanent link">#</a></h5>
-<pre><code>- TEMP_SENSOR_0 1
-- TEMP_SENSOR_BED 1 
-- PIDTEMP
-- PIDTEMPBED
-- EXTRUDE_MINTEMP
+<h3 id="html">Клонировать репозиторий в папку <code>html</code><a class="headerlink" href="#html" title="Permanent link">#</a></h3>
+<pre><code>git clone git@github.com:___/sphinxdoc-test.git html
+cd html
 </code></pre>
-<ul>
-<li><a href="https://www.thingiverse.com/thing:103668/files">Генератор таблицы термитсора для Marlin</a></li>
-</ul>
-<h5 id="section-homing">@section homing<a class="headerlink" href="#section-homing" title="Permanent link">#</a></h5>
-<pre><code>- USE_XMIN_PLUG
-- USE_YMAX_PLUG
-- USE_ZMAX_PLUG
-- ENDSTOPPULLUPS
-- X_MIN_ENDSTOP_INVERTING true
+<h3 id="_4">Создть ветку для публикации<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<pre><code>git branch gh-pages
 </code></pre>
-<ul>
-<li>Stepper Drivers:<ul>
-<li>A4988</li>
-<li>'TMC2209' / 'TMC2209_STANDALONE'</li>
-<li><a href="https://3deshnik.ru/forum/viewtopic.php?f=5&amp;t=78">Расчет опорного напряжения для драйверов шаговых двигателей - форум 3deshnik</a></li>
-</ul>
-</li>
-</ul>
-<h5 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h5>
-<pre><code>- DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95 }
-- DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-- DEFAULT_MAX_ACCELERATION      { 3000, 3000, 250, 10000 }
-
-- P - DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves 
-- R - DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-- T - DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
-
-- CLASSIC_JERK
-- DEFAULT_EJERK
-- JUNCTION_DEVIATION_MM
+<h3 id="git">Настроить git для публикации<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
+<pre><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
+rm .git/index
+git clean -fdx
 </code></pre>
-<ul>
-<li><a href="https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html">Расчет Junction Deviation для Marlin</a></li>
-<li><a href="https://blog.prusaprinters.org/calculator_3416/#stepspermmbelt">Калькулятор расчета шаг/мм для шаговых двигателей</a></li>
-</ul>
-<h5 id="mix">MIX<a class="headerlink" href="#mix" title="Permanent link">#</a></h5>
-<pre><code>- INVERT_X_DIR true
-- INVERT_Y_DIR false
-- INVERT_Z_DIR true
-- INVERT_E0_DIR true
-- X_HOME_DIR -1
-- Y_HOME_DIR 1
-- Z_HOME_DIR 1
-- X_BED_SIZE 195
-- Y_BED_SIZE 195
-- Z_MAX_POS 209
-- MIN_SOFTWARE_ENDSTOP_X
-- MAX_SOFTWARE_ENDSTOP_Y
-- MAX_SOFTWARE_ENDSTOP_Z
+<p><code>symbolic-ref</code> - создаёт или обновляет символьную ссылку, переключая указатель
+на указанную в аргументах ветку.</p>
+<p><code>git clean -fdx</code> - полностью очищает текущую папку.</p>
+<h2 id="makefile">Изменить <code>Makefile</code><a class="headerlink" href="#makefile" title="Permanent link">#</a></h2>
+<p>В скрипте сборки необходимо изменить значение параметра <code>BUILDDIR</code>, указав путь
+к ранее созданной папке для публикации.</p>
+<pre><code>BUILDDIR=../../sphinx-test-docs
 </code></pre>
-<h5 id="section-calibrate">@section calibrate:<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h5>
-<pre><code>- MESH_BED_LEVELING
-- LCD_BED_LEVELING
-- LEVEL_BED_CORNERS
+<p>Для упрощения процесса публикации изменений, в <code>Makefile</code> добавьте шаг отправки
+данных в репозиторий:</p>
+<pre><code>cd $(BUILDDIR)/html
+git add .
+git commit -m &quot;rebuilt docs&quot;
+git push origin gh-pages
 </code></pre>
-<h5 id="section-extras">@section extras:<a class="headerlink" href="#section-extras" title="Permanent link">#</a></h5>
-<pre><code>- EEPROM_SETTINGS
+<h2 id="nojekyll">Добавить <code>.nojekyll</code> файл<a class="headerlink" href="#nojekyll" title="Permanent link">#</a></h2>
+<p>Файл <code>.nojekyll</code> необходимо добавить в репозиторий для того, чтобы стандартные
+парсеры github игнорировали страницы, сгенерированные <code>sphinx</code>:</p>
+<pre><code>cd sphinxdoc-test-docs/html
+touch .nojekyll
+git add .nojekyll
+git commit -m &quot;added .nojekyll&quot;
 </code></pre>
-<h5 id="section-lcd">@section lcd:<a class="headerlink" href="#section-lcd" title="Permanent link">#</a></h5>
-<pre><code>- LCD_LANGUAGE en
-- DISPLAY_CHARSET_HD44780 CYRILLIC
-- SDSUPPORT
-- MINIPANEL
-- MKS_MINI_12864
+<h2 id="_5">Настройка на другой машине<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>При необходимости воспроизвести рабочую среду на другой машине необходимо:</p>
+<ol>
+<li>Клонировать основной репозиторий:</li>
+</ol>
+<pre><code>git clone git@github.com:___/sphinxdoc-test.git
 </code></pre>
-<h2 id="configuration_advh">Configuration_adv.h<a class="headerlink" href="#configuration_advh" title="Permanent link">#</a></h2>
-<ul>
-<li><code>E0_AUTO_FAN_PIN 10</code></li>
-<li><code>QUICK_HOME</code> </li>
-<li><code>BABYSTEPPING</code></li>
-<li><code>LIN_ADVANCE</code><ul>
-<li><code>LIN_ADVANCE_K 0</code></li>
-<li><code>LA_DEBUG</code></li>
-</ul>
-</li>
-<li><code>NO_VOLUMETRICS</code></li>
-</ul>
+<ol>
+<li>Настроить папку для сборки документации:</li>
+</ol>
+<pre><code>mkdir sphinxdoc-test-docs
+cd sphinxdoc-test-docs
+git clone git@github.com:___/sphinxdoc-test.git html
+</code></pre>
+<ol>
+<li>Добавить локальную ветку для отслеживания ветки <code>gh-pages</code>:</li>
+</ol>
+<pre><code>git checkout -b gh-pages remotes/origin/gh-pages
+</code></pre>
 
               
             </article>
@@ -1173,7 +1097,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Melty Minds Knowledge Base" rel="prev">
+        <a href="../sphinx_to_gh_pages_eng/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publish sphinx-generated docs on GitHub Pages" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1182,20 +1106,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Melty Minds Knowledge Base
+              Publish sphinx-generated docs on GitHub Pages
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../arkenstone/" class="md-footer__link md-footer__link--next" aria-label="Next: Arkenstone" rel="next">
+        <a href="../../notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Notes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Arkenstone
+              Notes
             </div>
           </div>
           <div class="md-footer__button md-icon">
