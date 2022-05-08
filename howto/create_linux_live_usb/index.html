@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/howto/sphinx_to_gh_pages_rus/">
+        <link rel="canonical" href="https://example.com/howto/create_linux_live_usb/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Публикация sphinx-документации на GitHub Pages - lejbronika</title>
+        <title>Create Linux Live-usb - lejbronika</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sphinx-github-pages" class="md-skip">
+        <a href="#create-linux-live-usb" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Публикация sphinx-документации на GitHub Pages
+              Create Linux Live-usb
             
           </span>
         </div>
@@ -631,11 +631,114 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../create_linux_live_usb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Create Linux Live-usb
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Create Linux Live-usb
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-verify-linux-iso" class="md-nav__link">
+    Download and verify linux .iso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-live-usb" class="md-nav__link">
+    Create Live-usb
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Live-usb">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easy-way-dd" class="md-nav__link">
+    Easy way -dd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-way" class="md-nav__link">
+    Manual way
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-should-work-for-both-uefi-and-bios" class="md-nav__link">
+    Why this should work for both UEFI and BIOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-persistence-to-live-usb" class="md-nav__link">
+    Add persistence to Live-usb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-persistence-with-luks-encryption-to-live-usb" class="md-nav__link">
+    Add persistence with LUKS encryption to Live-usb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-partition-with-fdisk" class="md-nav__link">
+    Create new partition with fdisk 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -659,121 +762,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Публикация sphinx-документации на GitHub Pages
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sphinx_to_gh_pages_rus/" class="md-nav__link">
         Публикация sphinx-документации на GitHub Pages
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Настроить основной репозиторий
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sphinx-" class="md-nav__link">
-    Создать sphinx-проект в основном репозитории
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Настроить папку для сборки
-  </a>
-  
-    <nav class="md-nav" aria-label="Настроить папку для сборки">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Создать папку
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#html" class="md-nav__link">
-    Клонировать репозиторий в папку html
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    Создть ветку для публикации
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    Настроить git для публикации
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#makefile" class="md-nav__link">
-    Изменить Makefile
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nojekyll" class="md-nav__link">
-    Добавить .nojekyll файл
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    Настройка на другой машине
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -908,51 +901,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Настроить основной репозиторий
+  <a href="#download-and-verify-linux-iso" class="md-nav__link">
+    Download and verify linux .iso
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sphinx-" class="md-nav__link">
-    Создать sphinx-проект в основном репозитории
+  <a href="#create-live-usb" class="md-nav__link">
+    Create Live-usb
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Настроить папку для сборки
-  </a>
-  
-    <nav class="md-nav" aria-label="Настроить папку для сборки">
+    <nav class="md-nav" aria-label="Create Live-usb">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Создать папку
+  <a href="#easy-way-dd" class="md-nav__link">
+    Easy way -dd
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#html" class="md-nav__link">
-    Клонировать репозиторий в папку html
+  <a href="#manual-way" class="md-nav__link">
+    Manual way
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    Создть ветку для публикации
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    Настроить git для публикации
+  <a href="#why-this-should-work-for-both-uefi-and-bios" class="md-nav__link">
+    Why this should work for both UEFI and BIOS
   </a>
   
 </li>
@@ -963,22 +942,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#makefile" class="md-nav__link">
-    Изменить Makefile
+  <a href="#add-persistence-to-live-usb" class="md-nav__link">
+    Add persistence to Live-usb
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nojekyll" class="md-nav__link">
-    Добавить .nojekyll файл
+  <a href="#add-persistence-with-luks-encryption-to-live-usb" class="md-nav__link">
+    Add persistence with LUKS encryption to Live-usb
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    Настройка на другой машине
+  <a href="#create-new-partition-with-fdisk" class="md-nav__link">
+    Create new partition with fdisk 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting 
   </a>
   
 </li>
@@ -998,103 +984,216 @@
 
   
 
-  <nav class="md-tags" >
-    
-      
-        <a href="../../tags/#git" class="md-tag">
-          git
-        </a>
-      
-    
-      
-        <a href="../../tags/#sphinx" class="md-tag">
-          sphinx
-        </a>
-      
-    
-  </nav>
 
 
+<h1 id="create-linux-live-usb">Create Linux Live-usb<a class="headerlink" href="#create-linux-live-usb" title="Permanent link">#</a></h1>
+<h2 id="download-and-verify-linux-iso">Download and verify linux <code>.iso</code><a class="headerlink" href="#download-and-verify-linux-iso" title="Permanent link">#</a></h2>
+<ul>
+<li>Download kali:</li>
+</ul>
+<pre><code>wget https://archive.kali.org/kali-images/kali-2022.1/kali-linux-2021.1-live-amd64.iso
+</code></pre>
+<ul>
+<li>Download and import public GPG key:</li>
+</ul>
+<pre><code>wget -q -O - https://archive.kali.org/archive-key.asc | gpg --import
 
-<h1 id="sphinx-github-pages">Публикация sphinx-документации на GitHub Pages<a class="headerlink" href="#sphinx-github-pages" title="Permanent link">#</a></h1>
-<p>Первоисточник доступен по <a href="https://daler.github.io/sphinxdoc-test/includeme.html">ссылке</a>.</p>
-<h2 id="_1">Настроить основной репозиторий<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<pre><code>mkdir sphinxdoc-test
-cd sphinxdoc-test
-git init
-touch README
-git add README
-git commit -m 'first commit'
-git remote add origin git@github.com:___/sphinxdoc-test.git
-git push origin master
+gpg --keyserver hkps://keys.openpgp.org --recv-key
 </code></pre>
-<h2 id="sphinx-">Создать sphinx-проект в основном репозитории<a class="headerlink" href="#sphinx-" title="Permanent link">#</a></h2>
-<pre><code>mkdir sphinxdoc-test/docs
-cd docs
-sphinx-quickstart
+<ul>
+<li>Extract fingerprint and get ISO SHASUMS:</li>
+</ul>
+<pre><code>gpg --fingerprint KEY_FROM_PREVIOUS_STEP
+
+wget https://archive.kali.org/kali-images/kali-2022.1/SHA256SUMS
+
+wget https://archive.kali.org/kali-images/kali-2022.1/SHA256SUMS.gpg
 </code></pre>
-<h2 id="_2">Настроить папку для сборки<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>Для сборки сайта с документацией и дальнейшей публикацией на GitHub Pages
-необходимо создать ещё одну отдельную папку и настроить её должным образом.</p>
-<h3 id="_3">Создать папку<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<pre><code>cd ..
-mkdir sphixdoc-test-docs
-cd sphixdoc-test-docs
+<ul>
+<li>Verify signature to ensure SHA256SUMS is authentic:</li>
+</ul>
+<pre><code>gpg --verify SHA256SUMS.gpg SHA256SUMS
 </code></pre>
-<h3 id="html">Клонировать репозиторий в папку <code>html</code><a class="headerlink" href="#html" title="Permanent link">#</a></h3>
-<pre><code>git clone git@github.com:___/sphinxdoc-test.git html
-cd html
+<p>Result (<em>ignore warnings</em>): <code>"Good signature from "Kali Linux Repository (devel@kali.org)"</code>
+- Generate ISO SHASUM:</p>
+<pre><code>shasum -a 256 ./kali-linux-2022.1-live-amd64.iso
 </code></pre>
-<h3 id="_4">Создть ветку для публикации<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
-<pre><code>git branch gh-pages
+<ul>
+<li>Search for SHASUMS for downloaded version and compare them with generated on previous step:</li>
+</ul>
+<pre><code>grep kali-linux-2020.3-live-amd64 SHA256SUMS
 </code></pre>
-<h3 id="git">Настроить git для публикации<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
-<pre><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
-rm .git/index
-git clean -fdx
+<h2 id="create-live-usb">Create Live-usb<a class="headerlink" href="#create-live-usb" title="Permanent link">#</a></h2>
+<h3 id="easy-way-dd">Easy way -<code>dd</code><a class="headerlink" href="#easy-way-dd" title="Permanent link">#</a></h3>
+<ul>
+<li>Find attached device with <code>dmesg</code>.</li>
+<li>Write ISO:</li>
+</ul>
+<pre><code>dd if=kali-linux-2022.1-live-amd64.iso of=/dev/sdb bs=1M status=progress
 </code></pre>
-<p><code>symbolic-ref</code> - создаёт или обновляет символьную ссылку, переключая указатель
-на указанную в аргументах ветку.</p>
-<p><code>git clean -fdx</code> - полностью очищает текущую папку.</p>
-<h2 id="makefile">Изменить <code>Makefile</code><a class="headerlink" href="#makefile" title="Permanent link">#</a></h2>
-<p>В скрипте сборки необходимо изменить значение параметра <code>BUILDDIR</code>, указав путь
-к ранее созданной папке для публикации.</p>
-<pre><code>BUILDDIR=../../sphinx-test-docs
+<ul>
+<li>Create and format additional partition. Verify with <code>lsblk</code>:</li>
+</ul>
+<pre><code>usb=/dev/sdb
+
+fdisk $usb &lt;&lt;&lt; $(printf &quot;n\np\n\n\n\nw&quot;)
 </code></pre>
-<p>Для упрощения процесса публикации изменений, в <code>Makefile</code> добавьте шаг отправки
-данных в репозиторий:</p>
-<pre><code>cd $(BUILDDIR)/html
-git add .
-git commit -m &quot;rebuilt docs&quot;
-git push origin gh-pages
+<h3 id="manual-way">Manual way<a class="headerlink" href="#manual-way" title="Permanent link">#</a></h3>
+<p>Based on this <a href="https://unix.stackexchange.com/questions/382817/uefi-bios-bootable-live-debian-stretch-amd64-with-persistence">stackexchange post</a> and <a href="https://wiki.archlinux.org/title/USB_flash_installation_medium#Using_manual_formatting">Arch Linux Docs</a>.</p>
+<ul>
+<li>Unmount device:</li>
+</ul>
+<pre><code>umount /dev/sdX
 </code></pre>
-<h2 id="nojekyll">Добавить <code>.nojekyll</code> файл<a class="headerlink" href="#nojekyll" title="Permanent link">#</a></h2>
-<p>Файл <code>.nojekyll</code> необходимо добавить в репозиторий для того, чтобы стандартные
-парсеры github игнорировали страницы, сгенерированные <code>sphinx</code>:</p>
-<pre><code>cd sphinxdoc-test-docs/html
-touch .nojekyll
-git add .nojekyll
-git commit -m &quot;added .nojekyll&quot;
+<ul>
+<li>Create partitions with <code>parted</code>:  <ul>
+<li>EFI boot partition,</li>
+<li>ISO partition with <code>legacy_boot</code> flag.</li>
+</ul>
+</li>
+</ul>
+<pre><code>parted /dev/sdX --script mktable gpt
+parted /dev/sdX --script mkpart EFI fat16 1MiB 10MiB
+parted /dev/sdX --script mkpart live fat16 10MiB 3GiB
+parted /dev/sdX --script mkpart persistence ext4 3GiB 100%
+parted /dev/sdX --script set 1 msftdata on
+parted /dev/sdX --script set 2 legacy_boot on
+parted /dev/sdX --script set 2 msftdata on
 </code></pre>
-<h2 id="_5">Настройка на другой машине<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
-<p>При необходимости воспроизвести рабочую среду на другой машине необходимо:</p>
-<ol>
-<li>Клонировать основной репозиторий:</li>
-</ol>
-<pre><code>git clone git@github.com:___/sphinxdoc-test.git
+<ul>
+<li>Create filesystems - FAT for EFI and live, ext4 for persistence:</li>
+</ul>
+<pre><code>mkfs.vfat -n EFI /dev/sdX1
+mkfs.vfat -n LIVE /dev/sdX2
+mkfs.ext4 -F -L persistence /dev/sdX3
 </code></pre>
-<ol>
-<li>Настроить папку для сборки документации:</li>
-</ol>
-<pre><code>mkdir sphinxdoc-test-docs
-cd sphinxdoc-test-docs
-git clone git@github.com:___/sphinxdoc-test.git html
+<ul>
+<li>Mount the resources:</li>
+</ul>
+<pre><code>mkdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
+
+mount /dev/sdX1 /tmp/usb-efi
+mount /dev/sdX2 /tmp/usb-live
+mount /dev/sdX3 /tmp/usb-persistence
+mount -oro live_img_name.iso /tmp/live-iso
 </code></pre>
-<ol>
-<li>Добавить локальную ветку для отслеживания ветки <code>gh-pages</code>:</li>
-</ol>
-<pre><code>git checkout -b gh-pages remotes/origin/gh-pages
+<ul>
+<li>Install live system:</li>
+</ul>
+<pre><code>cp -ar /tmp/live-iso/* /tmp/usb-live
 </code></pre>
+<ul>
+<li><a href="#add-persistence">Add persistence</a>. </li>
+<li>Grub for <a href="https://www.wisecleaner.com/think-tank/310-What-is-UEFI.html">UEFI</a> support:</li>
+</ul>
+<pre><code>apt-get install grub2 grub-efi-amd64-bin
+grub-install --no-uefi-secure-boot --removable --target=x86_64-efi --boot-directory=/tmp/usb-live/boot/ --efi-directory=/tmp/usb-efi /dev/sdX
+</code></pre>
+<ul>
+<li>Syslinux for legacy BIOS support (<a href="https://wiki.archlinux.org/title/Syslinux#Installation_on_BIOS">wiki.archlinux</a>):</li>
+</ul>
+<pre><code>apt-get install syslinux mtools
+dd bs=440 count=1 conv=notrunc if=/usr/lib/syslinux/mbr/gptmbr.bin of=/dev/sdX
+syslinux --install /dev/sdX2
+</code></pre>
+<ul>
+<li>Reuse the <code>isolinux config</code> of original live ISO: </li>
+</ul>
+<pre><code>mkdir /tmp/usb-live/syslinux
+mv /tmp/usb-live/isolinux/* /tmp/usb-live/syslinux
+mv /tmp/usb-live/syslinux/isolinux.bin /tmp/usb-live/syslinux/syslinux.bin
+mv /tmp/usb-live/syslinux/isolinux.cfg /tmp/usb-live/syslinux/syslinux.cfg
+</code></pre>
+<ul>
+<li>Modify Kernel parameters with <a href="https://www.unix.com/man-page/Linux/1/sed/">sed</a>:  <ul>
+<li>Add the <code>persistence</code> kernel parameter to <code>menu.cfg</code> and <code>grub.cfg</code>.</li>
+<li>Set the <code>keyboard-layout</code> kernel parameter.</li>
+<li>Fix the grub splash image (optional).</li>
+</ul>
+</li>
+</ul>
+<pre><code>sed --in-place '0,/boot=live/{s/\(boot=live ,*\)$/\1 persistence/}' /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
+
+sed --in-place '0,/boot=live/{s/\(boot=live ,*\)$/\1 keyboard-layout=en locales=en_US.UTF-8,ru_RU.UTF-8/}' /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
+
+sed --in-place 's#isolinux/splash#syslinux/splash#' /tmp/usb-live/boot/grub/grub.cfg
+</code></pre>
+<ul>
+<li>Unmount and cleanup:</li>
+</ul>
+<pre><code>umount /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
+rmdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
+</code></pre>
+<h3 id="why-this-should-work-for-both-uefi-and-bios">Why this should work for both UEFI and BIOS<a class="headerlink" href="#why-this-should-work-for-both-uefi-and-bios" title="Permanent link">#</a></h3>
+<blockquote>
+<p>When starting in UEFI mode, the PC will scan the FAT partitions we defined in the GPT partition table. The first FAT partition carries the UEFI grub bootloader, which is found because it is located in the path specified by UEFI for removable drives (the --removable switch to grub-install did this). No UEFI boot entry is necessary for that to work, we only need to make the PC try to boot from the USB drive. That grub is configured to take it from there (load the grub.cfg, show the menu, etc.).  </p>
+<p>When starting in BIOS mode and selecting to boot from the USB drive, the PC will execute the gptmbr.bin bootloader code we have written to the protective MBR of the USB drive. That bootloader looks for the GPT partition marked with the legacy_boot flag and chainload syslinux from that partition. Syslinux then takes over (load menu.cfg, show the menu, etc.).</p>
+</blockquote>
+<h2 id="add-persistence-to-live-usb">Add persistence to Live-usb<a class="headerlink" href="#add-persistence-to-live-usb" title="Permanent link">#</a></h2>
+<ul>
+<li>Create <code>ext3</code> or <code>ext4</code> file system in the partition and clabel ot <code>persistence</code>:</li>
+</ul>
+<pre><code>mkfs.ext3 -L persistence ${usb}3
+</code></pre>
+<ul>
+<li>Create mount point, mount partition, create configuration file to enable persistence and unmount partition:</li>
+</ul>
+<pre><code>mkdir -p /mnt/usb_sd
+mount ${usb}3 /mnt/usb_sd
+echo &quot;/ union&quot; | sudo tee /mnt/usb_sd/persistense.conf
+umount ${usb}3
+</code></pre>
+<h2 id="add-persistence-with-luks-encryption-to-live-usb">Add persistence with LUKS encryption to Live-usb<a class="headerlink" href="#add-persistence-with-luks-encryption-to-live-usb" title="Permanent link">#</a></h2>
+<ul>
+<li>Initialize LUKS encryption on created partition:</li>
+</ul>
+<pre><code>cryptsetup --verbose --verify-passphrase luksFormat ${usb}3
+cryptsetup luksOpen ${usb}3 usb_sd
+</code></pre>
+<ul>
+<li>Create <code>ext3</code> or <code>ext4</code> filesystem and label it <code>persistence</code>:</li>
+</ul>
+<pre><code>mkfs.ext3 -L persistence /dev/mapper/usb_sd
+e2label /dev/mapper/usb_sd persistence
+</code></pre>
+<ul>
+<li>Create mount point, mount encrypted partition, set up the <code>persistence.conf</code> and unmount partition:</li>
+</ul>
+<pre><code>mkdir -p /mnt/usb_sd/persistense
+mount /dev/mapper/usb_sd /mnt/usb_sd
+echo &quot;/ union&quot; | sudo tee /mnt/usb_sd/persistence.conf
+umount /dev/mapper/usb_sd
+</code></pre>
+<ul>
+<li>Close the encrypted channel to the partition:</li>
+</ul>
+<pre><code>cryptsetup lulksclose /dev/mapper/usb_sd
+</code></pre>
+<h2 id="create-new-partition-with-fdisk">Create new partition with <code>fdisk</code> <a name="fdisk-new-partition"></a><a class="headerlink" href="#create-new-partition-with-fdisk" title="Permanent link">#</a></h2>
+<ul>
+<li>Select storage disk:</li>
+</ul>
+<pre><code>fdisk /dev/sdb
+</code></pre>
+<ul>
+<li>Create new partition:  <ul>
+<li><code>o</code> command to create partition table</li>
+<li><code>n</code> command to create new partition</li>
+<li>select partition number</li>
+<li>start sector: default</li>
+<li>partition size: <code>+32GB</code></li>
+<li><code>w</code> command to write on disk</li>
+</ul>
+</li>
+<li>Format partition for necessary filesystem:</li>
+</ul>
+<pre><code>mkfs -t vfat /dev/sdb3
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting <a name="troubleshooting"></a><a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<ul>
+<li>If messed up with partitions - just delete <a href="https://en.wikipedia.org/wiki/Device_file">device file</a>: <code>sudo rm /dev/sdb</code> and re-insert the device - <a href="https://unix.stackexchange.com/questions/349052/dd-command-indicates-not-enough-disk-space-trying-to-format-sd-card-for-raspbe">stackexchange</a>.</li>
+<li>Syslinux <a href="https://wiki.archlinux.org/title/Syslinux#Manual_install">manual install</a>.</li>
+</ul>
 
               
             </article>
@@ -1113,7 +1212,7 @@ git clone git@github.com:___/sphinxdoc-test.git html
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../sphinx_to_gh_pages_eng/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publish sphinx-generated docs on GitHub Pages" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: How To Guides" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1122,20 +1221,20 @@ git clone git@github.com:___/sphinxdoc-test.git html
               <span class="md-footer__direction">
                 Previous
               </span>
-              Publish sphinx-generated docs on GitHub Pages
+              How To Guides
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Notes" rel="next">
+        <a href="../sphinx_to_gh_pages_eng/" class="md-footer__link md-footer__link--next" aria-label="Next: Publish sphinx-generated docs on GitHub Pages" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Notes
+              Publish sphinx-generated docs on GitHub Pages
             </div>
           </div>
           <div class="md-footer__button md-icon">
