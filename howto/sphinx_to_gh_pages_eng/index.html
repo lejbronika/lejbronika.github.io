@@ -391,6 +391,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         
@@ -419,8 +425,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
-        Marlin Configuration Notes
+      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+        Инструкция оператора MSLA-принтера
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+        R2D2 Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+        Black Widow Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+        G-code Notes
       </a>
     </li>
   
@@ -968,103 +1016,103 @@
 <ul>
 <li>First set up main repository, any files can be stored there.  Following commands can be used:</li>
 </ul>
-<pre><code>mkdir sphinxdoc-test
+<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test
 cd sphinxdoc-test
 git init
 touch README
 git add README
-git commit -m 'first commit'
+git commit -m &#39;first commit&#39;
 git remote add origin git@github.com:daler/sphinxdoc-test.git
 git push origin master
-</code></pre>
+</code></pre></div>
 <h2 id="set-up-sphinx-within-main-repository">Set up sphinx within main repository<a class="headerlink" href="#set-up-sphinx-within-main-repository" title="Permanent link">#</a></h2>
 <ul>
 <li>Make a <code>docs</code> dir that will store documentation source from Sphinx:</li>
 </ul>
-<pre><code>mkdir sphinxdoc-test/docs
-</code></pre>
+<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test/docs
+</code></pre></div>
 <ul>
 <li>Set up Sphinx from the <code>docs</code> dir:</li>
 </ul>
-<pre><code>cd docs
+<div class="highlight"><pre><span></span><code>cd docs
 sphinx-quickstart
-</code></pre>
+</code></pre></div>
 <h2 id="set-up-separate-repository-for-hosting">Set up separate repository for hosting<a class="headerlink" href="#set-up-separate-repository-for-hosting" title="Permanent link">#</a></h2>
 <ul>
 <li>Set up a completely new directory that will serve as the build directory for Sphinx. Name used in guide - <code>sphinxdoc-test-docs</code>. Use following commands:</li>
 </ul>
-<pre><code>cd ..
+<div class="highlight"><pre><span></span><code>cd ..
 mkdir sphinxdoc-test-docs
 cd sphinxdoc-test-docs
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Clone the repo which was set up on github into a dir called <code>html</code>. Use following command to create it:</li>
 </ul>
-<pre><code>git clone git@github.com:daler/sphinxdoc-test.git html
+<div class="highlight"><pre><span></span><code>git clone git@github.com:daler/sphinxdoc-test.git html
 cd html
-</code></pre>
+</code></pre></div>
 <p>The <code>html</code> dir now has a clone of the repository.  </p>
 <ul>
 <li>Create a new branch called <code>gh-pages</code>. This is a special branch name that github looks for in order to build static html pages:</li>
 </ul>
-<pre><code>git branch gh-pages
-</code></pre>
+<div class="highlight"><pre><span></span><code>git branch gh-pages
+</code></pre></div>
 <ul>
 <li>Use following commands to switch to the <code>gh-pages</code> branch and clean it from any data:</li>
 </ul>
-<pre><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
+<div class="highlight"><pre><span></span><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
 rm .git/index
 git clean -fdx
-</code></pre>
+</code></pre></div>
 <p>After this <code>gh-pages</code> branch is empty and ready to get html files from sphinx-build. After pushing this branch to github documentation site will be avaliable on github pages.</p>
 <h2 id="makefile-changes">Makefile changes<a class="headerlink" href="#makefile-changes" title="Permanent link">#</a></h2>
 <ul>
 <li>Change <code>BUILDIR</code> and set it to folder, in which separate repository was configured:</li>
 </ul>
-<pre><code>BULDDIR = ../../sphinx-test-docs
-</code></pre>
+<div class="highlight"><pre><span></span><code>BULDDIR = ../../sphinx-test-docs
+</code></pre></div>
 <ul>
 <li>Add following step if you wnat to automate deployment to githubpages:</li>
 </ul>
-<pre><code>cd $(BUILDDIR)/html 
+<div class="highlight"><pre><span></span><code>cd $(BUILDDIR)/html 
 git add . 
 git commit -m &quot;rebuilt docs&quot;
 git push origin gh-pages
-</code></pre>
+</code></pre></div>
 <h2 id="initial-creation-and-commit-workflow">Initial creation and commit workflow<a class="headerlink" href="#initial-creation-and-commit-workflow" title="Permanent link">#</a></h2>
 <ul>
 <li>Commit all code in the main repository:</li>
 </ul>
-<pre><code>git add .
+<div class="highlight"><pre><span></span><code>git add .
 git commit -m &quot;added all files and docs&quot;
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Recreate the docs:</li>
 </ul>
-<pre><code>cd docs
+<div class="highlight"><pre><span></span><code>cd docs
 make html
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Change to the <code>gh-pages</code> repository dir and commit the stuff that the <code>make html</code> command made:</li>
 </ul>
-<pre><code>cd ../sphinxdoc-test-docs/html
+<div class="highlight"><pre><span></span><code>cd ../sphinxdoc-test-docs/html
 git add .
 git commit -m &quot;rebuild docs&quot;
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Publish updated docs on github pages:</li>
 </ul>
-<pre><code>git push origin gh-pages
-</code></pre>
+<div class="highlight"><pre><span></span><code>git push origin gh-pages
+</code></pre></div>
 <h2 id="add-a-nojekyll-file">Add a .nojekyll file<a class="headerlink" href="#add-a-nojekyll-file" title="Permanent link">#</a></h2>
 <ul>
 <li>Add an empty file called <code>.nojekyll</code> in the docs repository.  This file tells github's default parsing software to ignore the sphinx-generated pages that are in the gh-pages branch:</li>
 </ul>
-<pre><code>cd sphinxdoc-test-docs/html
+<div class="highlight"><pre><span></span><code>cd sphinxdoc-test-docs/html
 touch .nojekyll
 git add .nojekyll
 git commit -m &quot;added .nojekyll&quot;
-</code></pre>
+</code></pre></div>
 <h2 id="setting-up-cloned-repositoriess-on-another-machine">Setting up cloned repositoriess on another machine<a class="headerlink" href="#setting-up-cloned-repositoriess-on-another-machine" title="Permanent link">#</a></h2>
 <p>The only requirement is that the folder name that will hold the docs repository must have the same relative path name as is referred to in the Makefile.
 If these repositories were set:
@@ -1074,22 +1122,22 @@ If these repositories were set:
 <ul>
 <li>Set up the main repo:</li>
 </ul>
-<pre><code>cd ~
+<div class="highlight"><pre><span></span><code>cd ~
 git clone git@github.com:daler/sphinxdoc-test.git
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Set up the docs repository.  For this create a dir first, then change to it and clone the <code>html</code> part of the repository:</li>
 </ul>
-<pre><code>cd ~
+<div class="highlight"><pre><span></span><code>cd ~
 mkdir sphinxdoc-test-docs
 cd sphinxdoc-test-docs
 git clone git@github.com:daler/sphinxdoc-test.git html
-</code></pre>
+</code></pre></div>
 <ul>
 <li>Create a local tracking branch to the <code>gh-pages</code> branch:</li>
 </ul>
-<pre><code>git checkout -b gh-pages remotes/origin/gh-pages
-</code></pre>
+<div class="highlight"><pre><span></span><code>git checkout -b gh-pages remotes/origin/gh-pages
+</code></pre></div>
 <p>Now the directories are set up the same way they were in the original setup described above.</p>
 
               

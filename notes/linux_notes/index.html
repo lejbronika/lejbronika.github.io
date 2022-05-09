@@ -391,6 +391,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         
@@ -419,8 +425,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
-        Marlin Configuration Notes
+      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+        Инструкция оператора MSLA-принтера
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+        R2D2 Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+        Black Widow Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+        G-code Notes
       </a>
     </li>
   
@@ -875,23 +923,19 @@
 <h1 id="linux-notes">Linux Notes<a class="headerlink" href="#linux-notes" title="Permanent link">#</a></h1>
 <h2 id="add-opacity-to-lxterminal">Add opacity to Lxterminal<a class="headerlink" href="#add-opacity-to-lxterminal" title="Permanent link">#</a></h2>
 <ul>
-<li>Install <a href="https://github.com/chjj/compton">Compton</a></li>
-</ul>
-<pre><code>sudo apt-get install compton
-</code></pre>
-<ul>
+<li>Install <a href="https://github.com/chjj/compton">Compton</a>
+<div class="highlight"><pre><span></span><code>sudo apt-get install compton
+</code></pre></div></li>
 <li>Use <code>xprop</code> command to get necessary app window properties.</li>
 <li>Search for <code>WM_CLASS(STRING) = APP_NAME</code> property.</li>
 <li>Use found name in <code>class_g</code> argument.</li>
-<li>Add opacity settings for  <code>~/.config/compton.conf</code>:</li>
+<li>Add opacity settings for  <code>~/.config/compton.conf</code>:
+<div class="highlight"><pre><span></span><code>sudo &#39;opacity-rule = [&quot;75:class_g *= &#39;APP_NAME&#39;&quot;]&#39; &gt; ~/.config/compton.conf
+</code></pre></div></li>
+<li>Add <code>compton</code> to <code>~/.config/lxsession/Lubuntu/autostart</code>
+<div class="highlight"><pre><span></span><code>sudo &#39;compton&#39; &gt; ~/.config/lxsession/Lubuntu/autostart
+</code></pre></div></li>
 </ul>
-<pre><code>sudo 'opacity-rule = [&quot;75:class_g *= 'APP_NAME'&quot;]' &gt; ~/.config/compton.conf
-</code></pre>
-<ul>
-<li>Add <code>compton</code> to <code>~/.config/lxsession/Lubuntu/autostart</code></li>
-</ul>
-<pre><code>sudo 'compton' &gt; ~/.config/lxsession/Lubuntu/autostart
-</code></pre>
 
               
             </article>

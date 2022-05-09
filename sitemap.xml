@@ -2,107 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/glossary/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tags/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/arc_codestyle/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/arc_schema/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/arc_structure/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/best_practices/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/branch_policy/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/arkenstone/get_on_board/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/howto/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/howto/create_linux_live_usb/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/howto/sphinx_to_gh_pages_eng/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/howto/sphinx_to_gh_pages_rus/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/meltyminds/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/meltyminds/configure_marlin/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <loc>https://example.com/meltyminds/black_widow_log/</loc>
+         <lastmod>2022-05-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/meltyminds/gcode_notes/</loc>
+         <lastmod>2022-05-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/meltyminds/msla_print_manual/</loc>
+         <lastmod>2022-05-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/meltyminds/r2d2_log/</loc>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notes/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notes/git_notes/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notes/linux_notes/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notes/win_notes/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tags/</loc>
-         <lastmod>2022-05-08</lastmod>
+         <lastmod>2022-05-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

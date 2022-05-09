@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/arkenstone/arc_schema/">
+        <link rel="canonical" href="https://example.com/meltyminds/r2d2_log/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Cхемы проекта - lejbronika</title>
+        <title>R2D2 Modifications Log - lejbronika</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c" class="md-skip">
+        <a href="#r2d2-modifications-log" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cхемы проекта
+              R2D2 Modifications Log
             
           </span>
         </div>
@@ -195,22 +195,6 @@
         
   
   
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../meltyminds/" class="md-tabs__link">
-        Melty Minds
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
     
   
 
@@ -220,6 +204,22 @@
   
     <li class="md-tabs__item">
       <a href="../" class="md-tabs__link md-tabs__link--active">
+        Melty Minds
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../arkenstone/" class="md-tabs__link">
         Arkenstone
       </a>
     </li>
@@ -375,12 +375,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -402,7 +404,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../meltyminds/">Melty Minds</a>
+          <a href="../">Melty Minds</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -425,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+      <a href="../msla_print_manual/" class="md-nav__link">
         Инструкция оператора MSLA-принтера
       </a>
     </li>
@@ -437,11 +439,148 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          R2D2 Modifications Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         R2D2 Modifications Log
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marlin-configuration" class="md-nav__link">
+    Marlin Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurationh" class="md-nav__link">
+    Configuration.h
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration.h">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-info" class="md-nav__link">
+    @section info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine" class="md-nav__link">
+    @section machine
+  </a>
+  
+    <nav class="md-nav" aria-label="@section machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-motion" class="md-nav__link">
+    @section motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mix" class="md-nav__link">
+    MIX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras" class="md-nav__link">
+    @section extras:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-lcd" class="md-nav__link">
+    @section lcd:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration_advh" class="md-nav__link">
+    Configuration_adv.h
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+      <a href="../black_widow_log/" class="md-nav__link">
         Black Widow Modifications Log
       </a>
     </li>
@@ -467,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+      <a href="../gcode_notes/" class="md-nav__link">
         G-code Notes
       </a>
     </li>
@@ -487,14 +626,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -520,7 +657,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Arkenstone</a>
+          <a href="../../arkenstone/">Arkenstone</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -543,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../get_on_board/" class="md-nav__link">
+      <a href="../../arkenstone/get_on_board/" class="md-nav__link">
         Знакомство с проектом
       </a>
     </li>
@@ -557,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arc_codestyle/" class="md-nav__link">
+      <a href="../../arkenstone/arc_codestyle/" class="md-nav__link">
         Стиль кода
       </a>
     </li>
@@ -571,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arc_structure/" class="md-nav__link">
+      <a href="../../arkenstone/arc_structure/" class="md-nav__link">
         Структура папок
       </a>
     </li>
@@ -583,21 +720,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../arkenstone/arc_schema/" class="md-nav__link">
         Cхемы проекта
       </a>
-      
     </li>
   
 
@@ -609,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../branch_policy/" class="md-nav__link">
+      <a href="../../arkenstone/branch_policy/" class="md-nav__link">
         Правила наименования веток
       </a>
     </li>
@@ -623,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best_practices/" class="md-nav__link">
+      <a href="../../arkenstone/best_practices/" class="md-nav__link">
         Лучшие практики работы с django
       </a>
     </li>
@@ -849,6 +976,117 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marlin-configuration" class="md-nav__link">
+    Marlin Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurationh" class="md-nav__link">
+    Configuration.h
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration.h">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-info" class="md-nav__link">
+    @section info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine" class="md-nav__link">
+    @section machine
+  </a>
+  
+    <nav class="md-nav" aria-label="@section machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-motion" class="md-nav__link">
+    @section motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mix" class="md-nav__link">
+    MIX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras" class="md-nav__link">
+    @section extras:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-lcd" class="md-nav__link">
+    @section lcd:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration_advh" class="md-nav__link">
+    Configuration_adv.h
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -862,15 +1100,134 @@
 
   
 
+  <nav class="md-tags" >
+    
+      
+        <a href="../../tags/#3d-print" class="md-tag">
+          3d-print
+        </a>
+      
+    
+      
+        <a href="../../tags/#marlin" class="md-tag">
+          Marlin
+        </a>
+      
+    
+  </nav>
 
 
-<h1 id="c">Cхемы проекта<a class="headerlink" href="#c" title="Permanent link">#</a></h1>
-<p><img alt="Диаграмма переходу по статусам" src="../../media/img/arkenstone/Arkenstone-Tournaments-Status_Flow.png" />
-<a href="https://online.visual-paradigm.com/w/pfbdkuig/diagrams/?lightbox=1&amp;highlight=0000ff&amp;edit=https%3A%2F%2Fonline.visual-paradigm.com%2Fw%2Fpfbdkuig%2Fdiagrams%2F%23G1X0txDtMb7SwXOysVoeONk4v2QflDs_up&amp;editBlankUrl=https%3A%2F%2Fonline.visual-paradigm.com%2Fapp%2Fdiagrams%2F%23diagram%3Aproj%3D0%26vpov%3D16.3%26vpob%3D20220410%26client%3D1%26edit%3D_blank&amp;layers=1&amp;nav=1&amp;vpov=16.3&amp;vpob=20220410#G1X0txDtMb7SwXOysVoeONk4v2QflDs_up">Диаграмма переходу по статусам</a></p>
-<p><img alt="Диаграмма взаимодействия сущностей" src="../../media/img/arkenstone/Arkenstone-ERD.png" />
-<a href="https://online.visual-paradigm.com/w/pfbdkuig/diagrams/?lightbox=1&amp;highlight=0000ff&amp;edit=https%3A%2F%2Fonline.visual-paradigm.com%2Fw%2Fpfbdkuig%2Fdiagrams%2F%23G1M9D0gULUbKCrF10KbvT5QxMEaLZ4tN7T&amp;editBlankUrl=https%3A%2F%2Fonline.visual-paradigm.com%2Fapp%2Fdiagrams%2F%23diagram%3Aproj%3D0%26vpov%3D16.3%26vpob%3D20220410%26client%3D1%26edit%3D_blank&amp;layers=1&amp;nav=1&amp;vpov=16.3&amp;vpob=20220410#G1M9D0gULUbKCrF10KbvT5QxMEaLZ4tN7T">Диаграмма взаимодействия сущностей</a></p>
-<p><img alt="Карта сайта" src="../../media/img/arkenstone/Arkenstone-Sitemap.png" />
-<a href="https://online.visual-paradigm.com/w/pfbdkuig/diagrams/?lightbox=1&amp;highlight=0000ff&amp;edit=https%3A%2F%2Fonline.visual-paradigm.com%2Fw%2Fpfbdkuig%2Fdiagrams%2F%23G1lkbeoG0ZO5x89a2aYm6XbzqVxudp1gyI&amp;editBlankUrl=https%3A%2F%2Fonline.visual-paradigm.com%2Fapp%2Fdiagrams%2F%23diagram%3Aproj%3D0%26vpov%3D16.3%26vpob%3D20220410%26client%3D1%26edit%3D_blank&amp;layers=1&amp;nav=1&amp;vpov=16.3&amp;vpob=20220410#G1lkbeoG0ZO5x89a2aYm6XbzqVxudp1gyI">Карта сайта</a></p>
+
+<h1 id="r2d2-modifications-log">R2D2 Modifications Log<a class="headerlink" href="#r2d2-modifications-log" title="Permanent link">#</a></h1>
+<h2 id="marlin-configuration">Marlin Configuration<a class="headerlink" href="#marlin-configuration" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Heisenberg_0.0.1</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Ultimaker/Ultimaker2Marlin">Ultimaker 2 Marlin example</a></li>
+</ul>
+<h2 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h2>
+<h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
+<pre><code>- STRING_CONFIG_H_AUTHOR "lejbron"
+- SHOW_CUSTOM_BOOTSCREEN
+</code></pre>
+<h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
+<pre><code>- MOTHERBOARD BOARD_MKS_GEN_13
+- BAUDRATE 25000
+- CUSTOM_MACHINE_NAME "melty"
+</code></pre>
+<ul>
+<li><a href="https://raw.githubusercontent.com/makerbase-mks/MKS-GEN/master/hardware/MKS%20GEN%20V1.4_004/MKS%20GEN%20V1.4_004%20PIN.pdf">MKS GEN 1.4 pins</a></li>
+<li><a href="https://github.com/makerbase-mks/MKS-GEN">MKS GEN 1.4 GitHub repo</a></li>
+</ul>
+<h5 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h5>
+<pre><code>- EXTRUDERS 1
+- DEFAULT_NOMIANL_FILAMENT_DIA 1.75
+</code></pre>
+<h5 id="section-temperature">@section temperature<a class="headerlink" href="#section-temperature" title="Permanent link">#</a></h5>
+<pre><code>- TEMP_SENSOR_0 1
+- TEMP_SENSOR_BED 1 
+- PIDTEMP
+- PIDTEMPBED
+- EXTRUDE_MINTEMP
+</code></pre>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:103668/files">Генератор таблицы термитсора для Marlin</a></li>
+</ul>
+<h5 id="section-homing">@section homing<a class="headerlink" href="#section-homing" title="Permanent link">#</a></h5>
+<pre><code>- USE_XMIN_PLUG
+- USE_YMAX_PLUG
+- USE_ZMAX_PLUG
+- ENDSTOPPULLUPS
+- X_MIN_ENDSTOP_INVERTING true
+</code></pre>
+<ul>
+<li>Stepper Drivers:<ul>
+<li>A4988</li>
+<li>'TMC2209' / 'TMC2209_STANDALONE'</li>
+<li><a href="https://3deshnik.ru/forum/viewtopic.php?f=5&amp;t=78">Расчет опорного напряжения для драйверов шаговых двигателей - форум 3deshnik</a></li>
+</ul>
+</li>
+</ul>
+<h5 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h5>
+<pre><code>- DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95 }
+- DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+- DEFAULT_MAX_ACCELERATION      { 3000, 3000, 250, 10000 }
+
+- P - DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves 
+- R - DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+- T - DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+
+- CLASSIC_JERK
+- DEFAULT_EJERK
+- JUNCTION_DEVIATION_MM
+</code></pre>
+<ul>
+<li><a href="https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html">Расчет Junction Deviation для Marlin</a></li>
+<li><a href="https://blog.prusaprinters.org/calculator_3416/#stepspermmbelt">Калькулятор расчета шаг/мм для шаговых двигателей</a></li>
+</ul>
+<h5 id="mix">MIX<a class="headerlink" href="#mix" title="Permanent link">#</a></h5>
+<pre><code>- INVERT_X_DIR true
+- INVERT_Y_DIR false
+- INVERT_Z_DIR true
+- INVERT_E0_DIR true
+- X_HOME_DIR -1
+- Y_HOME_DIR 1
+- Z_HOME_DIR 1
+- X_BED_SIZE 195
+- Y_BED_SIZE 195
+- Z_MAX_POS 209
+- MIN_SOFTWARE_ENDSTOP_X
+- MAX_SOFTWARE_ENDSTOP_Y
+- MAX_SOFTWARE_ENDSTOP_Z
+</code></pre>
+<h5 id="section-calibrate">@section calibrate:<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h5>
+<pre><code>- MESH_BED_LEVELING
+- LCD_BED_LEVELING
+- LEVEL_BED_CORNERS
+</code></pre>
+<h5 id="section-extras">@section extras:<a class="headerlink" href="#section-extras" title="Permanent link">#</a></h5>
+<pre><code>- EEPROM_SETTINGS
+</code></pre>
+<h5 id="section-lcd">@section lcd:<a class="headerlink" href="#section-lcd" title="Permanent link">#</a></h5>
+<pre><code>- LCD_LANGUAGE en
+- DISPLAY_CHARSET_HD44780 CYRILLIC
+- SDSUPPORT
+- MINIPANEL
+- MKS_MINI_12864
+</code></pre>
+<h2 id="configuration_advh">Configuration_adv.h<a class="headerlink" href="#configuration_advh" title="Permanent link">#</a></h2>
+<ul>
+<li><code>E0_AUTO_FAN_PIN 10</code></li>
+<li><code>QUICK_HOME</code> </li>
+<li><code>BABYSTEPPING</code></li>
+<li><code>LIN_ADVANCE</code><ul>
+<li><code>LIN_ADVANCE_K 0</code></li>
+<li><code>LA_DEBUG</code></li>
+</ul>
+</li>
+<li><code>NO_VOLUMETRICS</code></li>
+</ul>
 
               
             </article>
@@ -889,7 +1246,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../arc_structure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Структура папок" rel="prev">
+        <a href="../msla_print_manual/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Инструкция оператора MSLA-принтера" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -898,20 +1255,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Структура папок
+              Инструкция оператора MSLA-принтера
             </div>
           </div>
         </a>
       
       
         
-        <a href="../branch_policy/" class="md-footer__link md-footer__link--next" aria-label="Next: Правила наименования веток" rel="next">
+        <a href="../black_widow_log/" class="md-footer__link md-footer__link--next" aria-label="Next: Black Widow Modifications Log" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Правила наименования веток
+              Black Widow Modifications Log
             </div>
           </div>
           <div class="md-footer__button md-icon">

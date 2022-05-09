@@ -391,6 +391,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         
@@ -419,8 +425,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
-        Marlin Configuration Notes
+      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+        Инструкция оператора MSLA-принтера
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+        R2D2 Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+        Black Widow Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+        G-code Notes
       </a>
     </li>
   
@@ -911,14 +959,17 @@
 </ul>
 </li>
 <li>Файл с общими настройками подключается в начале файлов настроек сред:
-    <code>from .base import *  # noqa</code></li>
+    <div class="highlight"><pre><span></span><code>from .base import *  # noqa
+</code></pre></div></li>
 </ul>
 <p>Для запуска сервера django с определенными настройками можно:
 - непосредсвенно указывать используемый файл при выполнении команды запуска сервера:
-    <code>python manage.py runserver --settings=mysite.settings.dev
-    python manage.py migrate --settings=mysite.settings.prod</code>
+    <div class="highlight"><pre><span></span><code>python manage.py runserver --settings=mysite.settings.dev
+python manage.py migrate --settings=mysite.settings.prod
+</code></pre></div>
 - задать значение <code>DJANGO_SETTINGS_MODULE</code> непосредственно в файле запуска - <code>manage.py</code>:
-    <code>os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings.dev")</code></p>
+    <div class="highlight"><pre><span></span><code>os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;mysite.settings.dev&quot;)
+</code></pre></div></p>
 <p>Подробное описание разделенеия <code>settings.py</code> на несколько файлов приводится в <a href="https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html">статье</a></p>
 <h2 id="separated-views">Separated views<a class="headerlink" href="#separated-views" title="Permanent link">#</a></h2>
 <ul>

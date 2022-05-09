@@ -391,6 +391,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         
@@ -419,8 +425,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
-        Marlin Configuration Notes
+      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+        Инструкция оператора MSLA-принтера
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+        R2D2 Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+        Black Widow Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+        G-code Notes
       </a>
     </li>
   
@@ -1019,82 +1067,82 @@
 <h1 id="sphinx-github-pages">Публикация sphinx-документации на GitHub Pages<a class="headerlink" href="#sphinx-github-pages" title="Permanent link">#</a></h1>
 <p>Первоисточник доступен по <a href="https://daler.github.io/sphinxdoc-test/includeme.html">ссылке</a>.</p>
 <h2 id="_1">Настроить основной репозиторий<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<pre><code>mkdir sphinxdoc-test
+<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test
 cd sphinxdoc-test
 git init
 touch README
 git add README
-git commit -m 'first commit'
+git commit -m &#39;first commit&#39;
 git remote add origin git@github.com:___/sphinxdoc-test.git
 git push origin master
-</code></pre>
+</code></pre></div>
 <h2 id="sphinx-">Создать sphinx-проект в основном репозитории<a class="headerlink" href="#sphinx-" title="Permanent link">#</a></h2>
-<pre><code>mkdir sphinxdoc-test/docs
+<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test/docs
 cd docs
 sphinx-quickstart
-</code></pre>
+</code></pre></div>
 <h2 id="_2">Настроить папку для сборки<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>Для сборки сайта с документацией и дальнейшей публикацией на GitHub Pages
 необходимо создать ещё одну отдельную папку и настроить её должным образом.</p>
 <h3 id="_3">Создать папку<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<pre><code>cd ..
+<div class="highlight"><pre><span></span><code>cd ..
 mkdir sphixdoc-test-docs
 cd sphixdoc-test-docs
-</code></pre>
+</code></pre></div>
 <h3 id="html">Клонировать репозиторий в папку <code>html</code><a class="headerlink" href="#html" title="Permanent link">#</a></h3>
-<pre><code>git clone git@github.com:___/sphinxdoc-test.git html
+<div class="highlight"><pre><span></span><code>git clone git@github.com:___/sphinxdoc-test.git html
 cd html
-</code></pre>
+</code></pre></div>
 <h3 id="_4">Создть ветку для публикации<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
-<pre><code>git branch gh-pages
-</code></pre>
+<div class="highlight"><pre><span></span><code>git branch gh-pages
+</code></pre></div>
 <h3 id="git">Настроить git для публикации<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
-<pre><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
+<div class="highlight"><pre><span></span><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
 rm .git/index
 git clean -fdx
-</code></pre>
+</code></pre></div>
 <p><code>symbolic-ref</code> - создаёт или обновляет символьную ссылку, переключая указатель
 на указанную в аргументах ветку.</p>
 <p><code>git clean -fdx</code> - полностью очищает текущую папку.</p>
 <h2 id="makefile">Изменить <code>Makefile</code><a class="headerlink" href="#makefile" title="Permanent link">#</a></h2>
 <p>В скрипте сборки необходимо изменить значение параметра <code>BUILDDIR</code>, указав путь
 к ранее созданной папке для публикации.</p>
-<pre><code>BUILDDIR=../../sphinx-test-docs
-</code></pre>
+<div class="highlight"><pre><span></span><code>BUILDDIR=../../sphinx-test-docs
+</code></pre></div>
 <p>Для упрощения процесса публикации изменений, в <code>Makefile</code> добавьте шаг отправки
 данных в репозиторий:</p>
-<pre><code>cd $(BUILDDIR)/html
+<div class="highlight"><pre><span></span><code>cd $(BUILDDIR)/html
 git add .
 git commit -m &quot;rebuilt docs&quot;
 git push origin gh-pages
-</code></pre>
+</code></pre></div>
 <h2 id="nojekyll">Добавить <code>.nojekyll</code> файл<a class="headerlink" href="#nojekyll" title="Permanent link">#</a></h2>
 <p>Файл <code>.nojekyll</code> необходимо добавить в репозиторий для того, чтобы стандартные
 парсеры github игнорировали страницы, сгенерированные <code>sphinx</code>:</p>
-<pre><code>cd sphinxdoc-test-docs/html
+<div class="highlight"><pre><span></span><code>cd sphinxdoc-test-docs/html
 touch .nojekyll
 git add .nojekyll
 git commit -m &quot;added .nojekyll&quot;
-</code></pre>
+</code></pre></div>
 <h2 id="_5">Настройка на другой машине<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>При необходимости воспроизвести рабочую среду на другой машине необходимо:</p>
 <ol>
 <li>Клонировать основной репозиторий:</li>
 </ol>
-<pre><code>git clone git@github.com:___/sphinxdoc-test.git
-</code></pre>
+<div class="highlight"><pre><span></span><code>git clone git@github.com:___/sphinxdoc-test.git
+</code></pre></div>
 <ol>
 <li>Настроить папку для сборки документации:</li>
 </ol>
-<pre><code>mkdir sphinxdoc-test-docs
+<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test-docs
 cd sphinxdoc-test-docs
 git clone git@github.com:___/sphinxdoc-test.git html
-</code></pre>
+</code></pre></div>
 <ol>
 <li>Добавить локальную ветку для отслеживания ветки <code>gh-pages</code>:</li>
 </ol>
-<pre><code>git checkout -b gh-pages remotes/origin/gh-pages
-</code></pre>
+<div class="highlight"><pre><span></span><code>git checkout -b gh-pages remotes/origin/gh-pages
+</code></pre></div>
 
               
             </article>

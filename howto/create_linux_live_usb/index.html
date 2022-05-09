@@ -391,6 +391,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         
@@ -419,8 +425,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meltyminds/configure_marlin/" class="md-nav__link">
-        Marlin Configuration Notes
+      <a href="../../meltyminds/msla_print_manual/" class="md-nav__link">
+        Инструкция оператора MSLA-принтера
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/r2d2_log/" class="md-nav__link">
+        R2D2 Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/black_widow_log/" class="md-nav__link">
+        Black Widow Modifications Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meltyminds/gcode_notes/" class="md-nav__link">
+        G-code Notes
       </a>
     </li>
   
@@ -989,141 +1037,113 @@
 <h1 id="create-linux-live-usb">Create Linux Live-usb<a class="headerlink" href="#create-linux-live-usb" title="Permanent link">#</a></h1>
 <h2 id="download-and-verify-linux-iso">Download and verify linux <code>.iso</code><a class="headerlink" href="#download-and-verify-linux-iso" title="Permanent link">#</a></h2>
 <ul>
-<li>Download kali:</li>
-</ul>
-<pre><code>wget https://archive.kali.org/kali-images/kali-2022.1/kali-linux-2021.1-live-amd64.iso
-</code></pre>
-<ul>
-<li>Download and import public GPG key:</li>
-</ul>
-<pre><code>wget -q -O - https://archive.kali.org/archive-key.asc | gpg --import
+<li>Download kali:
+<div class="highlight"><pre><span></span><code>wget https://archive.kali.org/kali-images/kali-2022.1/kali-linux-2021.1-live-amd64.iso
+</code></pre></div></li>
+<li>Download and import public GPG key:
+<div class="highlight"><pre><span></span><code>wget -q -O - https://archive.kali.org/archive-key.asc | gpg --import
 
 gpg --keyserver hkps://keys.openpgp.org --recv-key
-</code></pre>
-<ul>
-<li>Extract fingerprint and get ISO SHASUMS:</li>
-</ul>
-<pre><code>gpg --fingerprint KEY_FROM_PREVIOUS_STEP
+</code></pre></div></li>
+<li>Extract fingerprint and get ISO SHASUMS:
+<div class="highlight"><pre><span></span><code>gpg --fingerprint KEY_FROM_PREVIOUS_STEP
 
 wget https://archive.kali.org/kali-images/kali-2022.1/SHA256SUMS
 
 wget https://archive.kali.org/kali-images/kali-2022.1/SHA256SUMS.gpg
-</code></pre>
-<ul>
-<li>Verify signature to ensure SHA256SUMS is authentic:</li>
+</code></pre></div></li>
+<li>Verify signature to ensure SHA256SUMS is authentic:
+<div class="highlight"><pre><span></span><code>gpg --verify SHA256SUMS.gpg SHA256SUMS
+</code></pre></div>
+Result (<em>ignore warnings</em>): <code>"Good signature from "Kali Linux Repository (devel@kali.org)"</code></li>
+<li>Generate ISO SHASUM:
+<div class="highlight"><pre><span></span><code>shasum -a 256 ./kali-linux-2022.1-live-amd64.iso
+</code></pre></div></li>
+<li>Search for SHASUMS for downloaded version and compare them with generated on previous step:
+<div class="highlight"><pre><span></span><code>grep kali-linux-2020.3-live-amd64 SHA256SUMS
+</code></pre></div></li>
 </ul>
-<pre><code>gpg --verify SHA256SUMS.gpg SHA256SUMS
-</code></pre>
-<p>Result (<em>ignore warnings</em>): <code>"Good signature from "Kali Linux Repository (devel@kali.org)"</code>
-- Generate ISO SHASUM:</p>
-<pre><code>shasum -a 256 ./kali-linux-2022.1-live-amd64.iso
-</code></pre>
-<ul>
-<li>Search for SHASUMS for downloaded version and compare them with generated on previous step:</li>
-</ul>
-<pre><code>grep kali-linux-2020.3-live-amd64 SHA256SUMS
-</code></pre>
 <h2 id="create-live-usb">Create Live-usb<a class="headerlink" href="#create-live-usb" title="Permanent link">#</a></h2>
 <h3 id="easy-way-dd">Easy way -<code>dd</code><a class="headerlink" href="#easy-way-dd" title="Permanent link">#</a></h3>
 <ul>
 <li>Find attached device with <code>dmesg</code>.</li>
-<li>Write ISO:</li>
-</ul>
-<pre><code>dd if=kali-linux-2022.1-live-amd64.iso of=/dev/sdb bs=1M status=progress
-</code></pre>
-<ul>
-<li>Create and format additional partition. Verify with <code>lsblk</code>:</li>
-</ul>
-<pre><code>usb=/dev/sdb
+<li>Write ISO:
+<div class="highlight"><pre><span></span><code>dd if=kali-linux-2022.1-live-amd64.iso of=/dev/sdb bs=1M status=progress
+</code></pre></div></li>
+<li>Create and format additional partition. Verify with <code>lsblk</code>:
+<div class="highlight"><pre><span></span><code>usb=/dev/sdb
 
 fdisk $usb &lt;&lt;&lt; $(printf &quot;n\np\n\n\n\nw&quot;)
-</code></pre>
+</code></pre></div></li>
+</ul>
 <h3 id="manual-way">Manual way<a class="headerlink" href="#manual-way" title="Permanent link">#</a></h3>
 <p>Based on this <a href="https://unix.stackexchange.com/questions/382817/uefi-bios-bootable-live-debian-stretch-amd64-with-persistence">stackexchange post</a> and <a href="https://wiki.archlinux.org/title/USB_flash_installation_medium#Using_manual_formatting">Arch Linux Docs</a>.</p>
 <ul>
-<li>Unmount device:</li>
-</ul>
-<pre><code>umount /dev/sdX
-</code></pre>
-<ul>
+<li>Unmount device:
+<div class="highlight"><pre><span></span><code>umount /dev/sdX
+</code></pre></div></li>
 <li>Create partitions with <code>parted</code>:  <ul>
 <li>EFI boot partition,</li>
-<li>ISO partition with <code>legacy_boot</code> flag.</li>
-</ul>
-</li>
-</ul>
-<pre><code>parted /dev/sdX --script mktable gpt
+<li>ISO partition with <code>legacy_boot</code> flag.
+<div class="highlight"><pre><span></span><code>parted /dev/sdX --script mktable gpt
 parted /dev/sdX --script mkpart EFI fat16 1MiB 10MiB
 parted /dev/sdX --script mkpart live fat16 10MiB 3GiB
 parted /dev/sdX --script mkpart persistence ext4 3GiB 100%
 parted /dev/sdX --script set 1 msftdata on
 parted /dev/sdX --script set 2 legacy_boot on
 parted /dev/sdX --script set 2 msftdata on
-</code></pre>
-<ul>
-<li>Create filesystems - FAT for EFI and live, ext4 for persistence:</li>
+</code></pre></div></li>
 </ul>
-<pre><code>mkfs.vfat -n EFI /dev/sdX1
+</li>
+<li>Create filesystems - FAT for EFI and live, ext4 for persistence:
+<div class="highlight"><pre><span></span><code>mkfs.vfat -n EFI /dev/sdX1
 mkfs.vfat -n LIVE /dev/sdX2
 mkfs.ext4 -F -L persistence /dev/sdX3
-</code></pre>
-<ul>
-<li>Mount the resources:</li>
-</ul>
-<pre><code>mkdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
+</code></pre></div></li>
+<li>Mount the resources:
+<div class="highlight"><pre><span></span><code>mkdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
 
 mount /dev/sdX1 /tmp/usb-efi
 mount /dev/sdX2 /tmp/usb-live
 mount /dev/sdX3 /tmp/usb-persistence
 mount -oro live_img_name.iso /tmp/live-iso
-</code></pre>
-<ul>
-<li>Install live system:</li>
-</ul>
-<pre><code>cp -ar /tmp/live-iso/* /tmp/usb-live
-</code></pre>
-<ul>
+</code></pre></div></li>
+<li>Install live system:
+<div class="highlight"><pre><span></span><code>cp -ar /tmp/live-iso/* /tmp/usb-live
+</code></pre></div></li>
 <li><a href="#add-persistence">Add persistence</a>. </li>
-<li>Grub for <a href="https://www.wisecleaner.com/think-tank/310-What-is-UEFI.html">UEFI</a> support:</li>
-</ul>
-<pre><code>apt-get install grub2 grub-efi-amd64-bin
+<li>Grub for <a href="https://www.wisecleaner.com/think-tank/310-What-is-UEFI.html">UEFI</a> support:
+<div class="highlight"><pre><span></span><code>apt-get install grub2 grub-efi-amd64-bin
 grub-install --no-uefi-secure-boot --removable --target=x86_64-efi --boot-directory=/tmp/usb-live/boot/ --efi-directory=/tmp/usb-efi /dev/sdX
-</code></pre>
-<ul>
-<li>Syslinux for legacy BIOS support (<a href="https://wiki.archlinux.org/title/Syslinux#Installation_on_BIOS">wiki.archlinux</a>):</li>
-</ul>
-<pre><code>apt-get install syslinux mtools
+</code></pre></div></li>
+<li>Syslinux for legacy BIOS support (<a href="https://wiki.archlinux.org/title/Syslinux#Installation_on_BIOS">wiki.archlinux</a>):
+<div class="highlight"><pre><span></span><code>apt-get install syslinux mtools
 dd bs=440 count=1 conv=notrunc if=/usr/lib/syslinux/mbr/gptmbr.bin of=/dev/sdX
 syslinux --install /dev/sdX2
-</code></pre>
-<ul>
-<li>Reuse the <code>isolinux config</code> of original live ISO: </li>
-</ul>
-<pre><code>mkdir /tmp/usb-live/syslinux
+</code></pre></div></li>
+<li>Reuse the <code>isolinux config</code> of original live ISO: 
+<div class="highlight"><pre><span></span><code>mkdir /tmp/usb-live/syslinux
 mv /tmp/usb-live/isolinux/* /tmp/usb-live/syslinux
 mv /tmp/usb-live/syslinux/isolinux.bin /tmp/usb-live/syslinux/syslinux.bin
 mv /tmp/usb-live/syslinux/isolinux.cfg /tmp/usb-live/syslinux/syslinux.cfg
-</code></pre>
-<ul>
+</code></pre></div></li>
 <li>Modify Kernel parameters with <a href="https://www.unix.com/man-page/Linux/1/sed/">sed</a>:  <ul>
 <li>Add the <code>persistence</code> kernel parameter to <code>menu.cfg</code> and <code>grub.cfg</code>.</li>
 <li>Set the <code>keyboard-layout</code> kernel parameter.</li>
-<li>Fix the grub splash image (optional).</li>
+<li>Fix the grub splash image (optional).
+<div class="highlight"><pre><span></span><code>sed --in-place &#39;0,/boot=live/{s/\(boot=live ,*\)$/\1 persistence/}&#39; /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
+
+sed --in-place &#39;0,/boot=live/{s/\(boot=live ,*\)$/\1 keyboard-layout=en locales=en_US.UTF-8,ru_RU.UTF-8/}&#39; /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
+
+sed --in-place &#39;s#isolinux/splash#syslinux/splash#&#39; /tmp/usb-live/boot/grub/grub.cfg
+</code></pre></div></li>
 </ul>
 </li>
-</ul>
-<pre><code>sed --in-place '0,/boot=live/{s/\(boot=live ,*\)$/\1 persistence/}' /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
-
-sed --in-place '0,/boot=live/{s/\(boot=live ,*\)$/\1 keyboard-layout=en locales=en_US.UTF-8,ru_RU.UTF-8/}' /tmp/usb-live/boot/grub/grub.cfg /tmp/usb-live/syslinux/menu.cfg
-
-sed --in-place 's#isolinux/splash#syslinux/splash#' /tmp/usb-live/boot/grub/grub.cfg
-</code></pre>
-<ul>
-<li>Unmount and cleanup:</li>
-</ul>
-<pre><code>umount /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
+<li>Unmount and cleanup:
+<div class="highlight"><pre><span></span><code>umount /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
 rmdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
-</code></pre>
+</code></pre></div></li>
+</ul>
 <h3 id="why-this-should-work-for-both-uefi-and-bios">Why this should work for both UEFI and BIOS<a class="headerlink" href="#why-this-should-work-for-both-uefi-and-bios" title="Permanent link">#</a></h3>
 <blockquote>
 <p>When starting in UEFI mode, the PC will scan the FAT partitions we defined in the GPT partition table. The first FAT partition carries the UEFI grub bootloader, which is found because it is located in the path specified by UEFI for removable drives (the --removable switch to grub-install did this). No UEFI boot entry is necessary for that to work, we only need to make the PC try to boot from the USB drive. That grub is configured to take it from there (load the grub.cfg, show the menu, etc.).  </p>
@@ -1131,51 +1151,41 @@ rmdir /tmp/usb-efi /tmp/usb-live /tmp/usb-persistence /tmp/live-iso
 </blockquote>
 <h2 id="add-persistence-to-live-usb">Add persistence to Live-usb<a class="headerlink" href="#add-persistence-to-live-usb" title="Permanent link">#</a></h2>
 <ul>
-<li>Create <code>ext3</code> or <code>ext4</code> file system in the partition and clabel ot <code>persistence</code>:</li>
-</ul>
-<pre><code>mkfs.ext3 -L persistence ${usb}3
-</code></pre>
-<ul>
-<li>Create mount point, mount partition, create configuration file to enable persistence and unmount partition:</li>
-</ul>
-<pre><code>mkdir -p /mnt/usb_sd
+<li>Create <code>ext3</code> or <code>ext4</code> file system in the partition and clabel ot <code>persistence</code>:
+<div class="highlight"><pre><span></span><code>mkfs.ext3 -L persistence ${usb}3
+</code></pre></div></li>
+<li>Create mount point, mount partition, create configuration file to enable persistence and unmount partition:
+<div class="highlight"><pre><span></span><code>mkdir -p /mnt/usb_sd
 mount ${usb}3 /mnt/usb_sd
 echo &quot;/ union&quot; | sudo tee /mnt/usb_sd/persistense.conf
 umount ${usb}3
-</code></pre>
+</code></pre></div></li>
+</ul>
 <h2 id="add-persistence-with-luks-encryption-to-live-usb">Add persistence with LUKS encryption to Live-usb<a class="headerlink" href="#add-persistence-with-luks-encryption-to-live-usb" title="Permanent link">#</a></h2>
 <ul>
 <li>Initialize LUKS encryption on created partition:</li>
 </ul>
-<pre><code>cryptsetup --verbose --verify-passphrase luksFormat ${usb}3
+<p><div class="highlight"><pre><span></span><code>cryptsetup --verbose --verify-passphrase luksFormat ${usb}3
 cryptsetup luksOpen ${usb}3 usb_sd
-</code></pre>
-<ul>
-<li>Create <code>ext3</code> or <code>ext4</code> filesystem and label it <code>persistence</code>:</li>
-</ul>
-<pre><code>mkfs.ext3 -L persistence /dev/mapper/usb_sd
+</code></pre></div>
+- Create <code>ext3</code> or <code>ext4</code> filesystem and label it <code>persistence</code>:
+<div class="highlight"><pre><span></span><code>mkfs.ext3 -L persistence /dev/mapper/usb_sd
 e2label /dev/mapper/usb_sd persistence
-</code></pre>
-<ul>
-<li>Create mount point, mount encrypted partition, set up the <code>persistence.conf</code> and unmount partition:</li>
-</ul>
-<pre><code>mkdir -p /mnt/usb_sd/persistense
+</code></pre></div>
+- Create mount point, mount encrypted partition, set up the <code>persistence.conf</code> and unmount partition:
+<div class="highlight"><pre><span></span><code>mkdir -p /mnt/usb_sd/persistense
 mount /dev/mapper/usb_sd /mnt/usb_sd
 echo &quot;/ union&quot; | sudo tee /mnt/usb_sd/persistence.conf
 umount /dev/mapper/usb_sd
-</code></pre>
-<ul>
-<li>Close the encrypted channel to the partition:</li>
-</ul>
-<pre><code>cryptsetup lulksclose /dev/mapper/usb_sd
-</code></pre>
+</code></pre></div>
+- Close the encrypted channel to the partition:
+<div class="highlight"><pre><span></span><code>cryptsetup lulksclose /dev/mapper/usb_sd
+</code></pre></div></p>
 <h2 id="create-new-partition-with-fdisk">Create new partition with <code>fdisk</code> <a name="fdisk-new-partition"></a><a class="headerlink" href="#create-new-partition-with-fdisk" title="Permanent link">#</a></h2>
 <ul>
-<li>Select storage disk:</li>
-</ul>
-<pre><code>fdisk /dev/sdb
-</code></pre>
-<ul>
+<li>Select storage disk:
+<div class="highlight"><pre><span></span><code>fdisk /dev/sdb
+</code></pre></div></li>
 <li>Create new partition:  <ul>
 <li><code>o</code> command to create partition table</li>
 <li><code>n</code> command to create new partition</li>
@@ -1185,10 +1195,10 @@ umount /dev/mapper/usb_sd
 <li><code>w</code> command to write on disk</li>
 </ul>
 </li>
-<li>Format partition for necessary filesystem:</li>
+<li>Format partition for necessary filesystem:
+<div class="highlight"><pre><span></span><code>mkfs -t vfat /dev/sdb3
+</code></pre></div></li>
 </ul>
-<pre><code>mkfs -t vfat /dev/sdb3
-</code></pre>
 <h2 id="troubleshooting">Troubleshooting <a name="troubleshooting"></a><a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <ul>
 <li>If messed up with partitions - just delete <a href="https://en.wikipedia.org/wiki/Device_file">device file</a>: <code>sudo rm /dev/sdb</code> and re-insert the device - <a href="https://unix.stackexchange.com/questions/349052/dd-command-indicates-not-enough-disk-space-trying-to-format-sd-card-for-raspbe">stackexchange</a>.</li>
