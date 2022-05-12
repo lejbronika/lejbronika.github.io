@@ -535,6 +535,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+    <nav class="md-nav" aria-label="@section calibrate">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#section-motion" class="md-nav__link">
     @section motion
@@ -550,7 +563,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#section-calibrate" class="md-nav__link">
+  <a href="#section-calibrate_1" class="md-nav__link">
     @section calibrate:
   </a>
   
@@ -1099,6 +1112,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+    <nav class="md-nav" aria-label="@section calibrate">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#section-motion" class="md-nav__link">
     @section motion
@@ -1114,7 +1140,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#section-calibrate" class="md-nav__link">
+  <a href="#section-calibrate_1" class="md-nav__link">
     @section calibrate:
   </a>
   
@@ -1217,6 +1243,9 @@
 - PIDTEMP
 - PIDTEMPBED
 - EXTRUDE_MINTEMP
+- TEMP_HYSTERESIS 5
+- HEATER_0_MAXTEMP 310
+- HOTEND_OVERSHOOT 10
 </code></pre>
 <ul>
 <li><a href="https://www.thingiverse.com/thing:103668/files">Генератор таблицы термитсора для Marlin</a></li>
@@ -1237,6 +1266,10 @@
 </ul>
 </li>
 </ul>
+<h4 id="section-calibrate">@section calibrate<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h4>
+<pre><code>- comment out: MANUAL_PROBE_START_Z
+- GRID_MAX_POINTS_X 4
+</code></pre>
 <h5 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h5>
 <pre><code>- DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95 }
 - DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
@@ -1269,7 +1302,7 @@
 - MAX_SOFTWARE_ENDSTOP_Y
 - MAX_SOFTWARE_ENDSTOP_Z
 </code></pre>
-<h5 id="section-calibrate">@section calibrate:<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h5>
+<h5 id="section-calibrate_1">@section calibrate:<a class="headerlink" href="#section-calibrate_1" title="Permanent link">#</a></h5>
 <pre><code>- MESH_BED_LEVELING
 - LCD_BED_LEVELING
 - LEVEL_BED_CORNERS
