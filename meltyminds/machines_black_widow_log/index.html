@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/meltyminds/project_freeplaytech_rpi0w_gba/">
+        <link rel="canonical" href="https://example.com/meltyminds/machines_black_widow_log/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>Freeplaytech RPi0W Game Boy - lejbronika</title>
+        <title>Black Widow Modifications Log - lejbronika</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#freeplaytech-rpi0w-game-boy" class="md-skip">
+        <a href="#black-widow-modifications-log" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Freeplaytech RPi0W Game Boy
+              Black Widow Modifications Log
             
           </span>
         </div>
@@ -409,6 +409,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -437,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../msla_print_manual/" class="md-nav__link">
+      <a href="../manuals_msla_print/" class="md-nav__link">
         Инструкция оператора MSLA-принтера
       </a>
     </li>
@@ -451,36 +455,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../r2d2_log/" class="md-nav__link">
+      <a href="../machines_general/" class="md-nav__link">
+        Общие заметки по сборке, прошивке и калибровке FDM-принтеров
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machines_r2d2_log/" class="md-nav__link">
         R2D2 Modifications Log
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../black_widow_log/" class="md-nav__link">
-        Black Widow Modifications Log
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project_smartable/" class="md-nav__link">
-        Rotary table for 3D photography
       </a>
     </li>
   
@@ -503,12 +493,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Freeplaytech RPi0W Game Boy
+          Black Widow Modifications Log
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Freeplaytech RPi0W Game Boy
+        Black Widow Modifications Log
       </a>
       
         
@@ -527,23 +517,243 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#controller-options" class="md-nav__link">
-    Controller options
+  <a href="#marlin-configuration" class="md-nav__link">
+    Marlin Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Marlin Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationh" class="md-nav__link">
+    Configuration.h
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration.h">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-info" class="md-nav__link">
+    @section info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_1" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_1" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_2" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-motion" class="md-nav__link">
+    @section motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-probes" class="md-nav__link">
+    @section probes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_2" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_3" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_3" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing_1" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_4" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing_2" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate_1" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras" class="md-nav__link">
+    @section extras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature_1" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-lcd" class="md-nav__link">
+    @section lcd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras_1" class="md-nav__link">
+    @section extras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_advh" class="md-nav__link">
+    Configuration_adv.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bl-touch-config" class="md-nav__link">
+    BL Touch Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-roms-form-usb" class="md-nav__link">
-    Run ROMs form USB
+  <a href="#3d-printed-parts" class="md-nav__link">
+    3d-printed parts
+  </a>
+  
+    <nav class="md-nav" aria-label="3d-printed parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installed" class="md-nav__link">
+    Installed
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#case-upgrade" class="md-nav__link">
-    Case upgrade
+        
+          <li class="md-nav__item">
+  <a href="#not-tested" class="md-nav__link">
+    Not tested
   </a>
+  
+    <nav class="md-nav" aria-label="Not tested">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanics" class="md-nav__link">
+    Mechanics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics-case" class="md-nav__link">
+    Electronics Case
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -562,7 +772,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../ru_choosing_cad_software_formlabs/" class="md-nav__link">
+      <a href="../projects_smartable/" class="md-nav__link">
+        Rotary table for 3D photography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects_freeplaytech_rpi0w_gba/" class="md-nav__link">
+        Freeplaytech RPi0W Game Boy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../articles_ru_choosing_cad_software_formlabs/" class="md-nav__link">
         Гайд по выбору CAD-программы от Formlabs
       </a>
     </li>
@@ -576,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ru_design_parts_for_sla_printing/" class="md-nav__link">
+      <a href="../articles_ru_design_parts_for_sla_printing/" class="md-nav__link">
         Разработка дизайна деталей для SLA 3D-печати
       </a>
     </li>
@@ -590,8 +828,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../gcode_notes/" class="md-nav__link">
+      <a href="../notes_gcode/" class="md-nav__link">
         G-code Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes_prusa_slicer/" class="md-nav__link">
+        Notes prusa slicer
       </a>
     </li>
   
@@ -967,23 +1219,243 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#controller-options" class="md-nav__link">
-    Controller options
+  <a href="#marlin-configuration" class="md-nav__link">
+    Marlin Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Marlin Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationh" class="md-nav__link">
+    Configuration.h
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration.h">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-info" class="md-nav__link">
+    @section info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_1" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_1" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_2" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-motion" class="md-nav__link">
+    @section motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-probes" class="md-nav__link">
+    @section probes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_2" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_3" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extruder_3" class="md-nav__link">
+    @section extruder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing_1" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-machine_4" class="md-nav__link">
+    @section machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-homing_2" class="md-nav__link">
+    @section homing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-calibrate_1" class="md-nav__link">
+    @section calibrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras" class="md-nav__link">
+    @section extras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-temperature_1" class="md-nav__link">
+    @section temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-lcd" class="md-nav__link">
+    @section lcd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-extras_1" class="md-nav__link">
+    @section extras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_advh" class="md-nav__link">
+    Configuration_adv.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bl-touch-config" class="md-nav__link">
+    BL Touch Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-roms-form-usb" class="md-nav__link">
-    Run ROMs form USB
+  <a href="#3d-printed-parts" class="md-nav__link">
+    3d-printed parts
+  </a>
+  
+    <nav class="md-nav" aria-label="3d-printed parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installed" class="md-nav__link">
+    Installed
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#case-upgrade" class="md-nav__link">
-    Case upgrade
+        
+          <li class="md-nav__item">
+  <a href="#not-tested" class="md-nav__link">
+    Not tested
   </a>
+  
+    <nav class="md-nav" aria-label="Not tested">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanics" class="md-nav__link">
+    Mechanics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics-case" class="md-nav__link">
+    Electronics Case
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1005,8 +1477,14 @@
   <nav class="md-tags" >
     
       
-        <a href="../../tags/#rpi" class="md-tag">
-          rpi
+        <a href="../../tags/#3d" class="md-tag">
+          3D
+        </a>
+      
+    
+      
+        <a href="../../tags/#marlin" class="md-tag">
+          Marlin
         </a>
       
     
@@ -1014,38 +1492,272 @@
 
 
 
-<h1 id="freeplaytech-rpi0w-game-boy">Freeplaytech RPi0W Game Boy<a class="headerlink" href="#freeplaytech-rpi0w-game-boy" title="Permanent link">#</a></h1>
-<p><img alt="Freeplaytech RPi0W GBA" src="../../media/img/freeplaytech_rpi0w_gba/freeplaytech_rpi0w_gba.jpg" /></p>
-<p>Page is dedicated to Game Boy on Raspberry Pi Zero W project made possible by <a href="https://www.freeplaytech.com/">Freeplaytech</a> circuit board. </p>
+<h1 id="black-widow-modifications-log">Black Widow Modifications Log<a class="headerlink" href="#black-widow-modifications-log" title="Permanent link">#</a></h1>
+<h2 id="marlin-configuration">Marlin Configuration<a class="headerlink" href="#marlin-configuration" title="Permanent link">#</a></h2>
+<blockquote>
+<p>meltyminds_0.0.1</p>
+</blockquote>
 <ul>
-<li><a href="https://www.freeplaytech.com/product/freeplay-zero-diy-kit-old-model/">Freeplay Zero DIY Kit (Old Model)</a></li>
-<li><a href="https://www.freeplaytech.com/support/setup/">Freeplay Setup</a></li>
-<li><a href="https://docs.google.com/document/d/1YMPsnwN5uU8oHgqL_MX6X-kczjqVfMh-30f3EUmZTbM/edit?usp=sharing">Assembling instructions</a></li>
+<li><a href="https://github.com/Homers3D/Tevo-Black-Widow">Tevo oficial image</a></li>
+<li><a href="https://github.com/lejbronika/Marlin_TBW">MeltyMinds Fork 2.0.x</a></li>
 </ul>
-<h2 id="controller-options">Controller options<a class="headerlink" href="#controller-options" title="Permanent link">#</a></h2>
-<p>To <a href="https://retropie.org.uk/docs/RetroArch-Configuration/#determining-button-values">determine button values</a> run following comand:
-<div class="highlight"><pre><span></span><code>jstest /dev/input/js0
+<h3 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h3>
+<h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 69</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define STRING_CONFIG_H_AUTHOR &quot;lejbron&quot;
 </code></pre></div>
-Replace js0 with js1, js2, js3, etc. as needed if not detected.</p>
-<p>Auto configuration is stored at <code>/opt/retropie/configs/all/retroarch/autoconfig</code>.<br />
-Remaps are saved as <code>.rmp</code> files in directory: <code>/opt/retropie/configs/SYSTEMNAME/</code>.</p>
-<h2 id="run-roms-form-usb">Run ROMs form USB<a class="headerlink" href="#run-roms-form-usb" title="Permanent link">#</a></h2>
-<ol>
-<li>Format USB.</li>
-<li>Create folder <code>retropi-mount</code></li>
-<li>Plug into RPi. All necessary contents will be copied on USB drive. </li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Once the folder structure is copied over the USB will be mounted over the RetroPie folder so any ROMs you add to your Pi will be run off of the USB.<br />
-<a href="https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/">RetroPi Docs</a></p>
-</div>
-<h2 id="case-upgrade">Case upgrade<a class="headerlink" href="#case-upgrade" title="Permanent link">#</a></h2>
+<h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 95</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define BAUDRATE 250000
+
+    #define MOTHERBOARD BOARD_MKS_GEN_13
+
+#define CUSTOM_MACHINE_NAME &quot;Black Widow&quot;
+
+#define X_DRIVER_TYPE  DRV8825
+#define Y_DRIVER_TYPE  DRV8825
+#define Z_DRIVER_TYPE  DRV8825
+#define E0_DRIVER_TYPE DRV8825
+</code></pre></div>
+<h4 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 233</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define EXTRUDERS 1
+#define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
+</code></pre></div>
+<h4 id="section-machine_1">@section machine<a class="headerlink" href="#section-machine_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 399</p>
+</blockquote>
+<h4 id="section-temperature">@section temperature<a class="headerlink" href="#section-temperature" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 446</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define TEMP_SENSOR_0 61
+#define TEMP_SENSOR_BED 1
+
+#define TEMP_HYSTERESIS              5
+
+#define HEATER_0_MAXTEMP 310
+
+#define HOTEND_OVERSHOOT 10
+
+#define PIDTEMP
+
+//#define PIDTEMPBED
+</code></pre></div>
+<h4 id="section-extruder_1">@section extruder<a class="headerlink" href="#section-extruder_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 800</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define EXTRUDE_MINTEMP 170
+</code></pre></div>
+<h4 id="section-machine_2">@section machine<a class="headerlink" href="#section-machine_2" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 845</p>
+</blockquote>
+<h4 id="section-homing">@section homing<a class="headerlink" href="#section-homing" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 872</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define USE_XMIN_PLUG
+#define USE_YMIN_PLUG
+#define USE_ZMIN_PLUG
+
+#define ENDSTOPPULLUPS
+
+#define X_MIN_ENDSTOP_INVERTING true
+#define Y_MIN_ENDSTOP_INVERTING true
+</code></pre></div>
+<h4 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 991</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 610 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 }
+
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+
+//#define CLASSIC_JERK
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+
+#if DISABLED(CLASSIC_JERK)
+  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+  #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
+                                      // for small segments (&lt; 1mm) with large junction angles (&gt; 135°).
+#endif
+</code></pre></div>
+<details class="info">
+<summary>Info</summary>
 <ul>
-<li><a href="https://www.thingiverse.com/thing:3723570">RetroModding - Backlight bleeding protector</a></li>
-<li><a href="https://www.thingiverse.com/thing:4168303">RetroModding - Speaker color ring</a></li>
-<li><a href="https://www.thingiverse.com/thing:2810882">RetroModding - Cart cover ventilated</a></li>
-<li><a href="https://www.thingiverse.com/thing:3689361">RetroModding - Cart cover solid</a></li>
+<li><code>DEFAULT_ACCELERATION</code>: <code>P</code></li>
+<li><code>DEFAULT_RETRACT_ACCELERATION</code>: <code>R</code></li>
+<li><code>DEFAULT_TRAVEL_ACCELERATION</code>: <code>T</code></li>
+</ul>
+</details>
+<h4 id="section-probes">@section probes<a class="headerlink" href="#section-probes" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1108</p>
+</blockquote>
+<h4 id="section-extruder_2">@section extruder<a class="headerlink" href="#section-extruder_2" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1428</p>
+</blockquote>
+<h4 id="section-machine_3">@section machine<a class="headerlink" href="#section-machine_3" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1433</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define INVERT_X_DIR false
+#define INVERT_Y_DIR true
+#define INVERT_Z_DIR true
+</code></pre></div>
+<h4 id="section-extruder_3">@section extruder<a class="headerlink" href="#section-extruder_3" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1446</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define INVERT_E0_DIR false
+</code></pre></div>
+<h4 id="section-homing_1">@section homing<a class="headerlink" href="#section-homing_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1458</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define X_HOME_DIR -1
+#define Y_HOME_DIR -1
+#define Z_HOME_DIR -1
+</code></pre></div>
+<h4 id="section-machine_4">@section machine<a class="headerlink" href="#section-machine_4" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1487</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 380
+#define Y_BED_SIZE 250
+
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
+#define Z_MIN_POS 0
+#define X_MAX_POS X_BED_SIZE
+#define Y_MAX_POS Y_BED_SIZE
+#define Z_MAX_POS 300
+</code></pre></div>
+<h4 id="section-calibrate">@section calibrate<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1632</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define MESH_BED_LEVELING
+
+//#define MANUAL_PROBE_START_Z 0.1
+
+#define GRID_MAX_POINTS_X 4
+#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
+
+#define LCD_BED_LEVELING
+#define LEVEL_BED_CORNERS
+</code></pre></div>
+<h4 id="section-homing_2">@section homing<a class="headerlink" href="#section-homing_2" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1849</p>
+</blockquote>
+<h4 id="section-calibrate_1">@section calibrate<a class="headerlink" href="#section-calibrate_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1886</p>
+</blockquote>
+<h4 id="section-extras">@section extras<a class="headerlink" href="#section-extras" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1947</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define EEPROM_SETTINGS
+</code></pre></div>
+<h4 id="section-temperature_1">@section temperature<a class="headerlink" href="#section-temperature_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 1987</p>
+</blockquote>
+<h4 id="section-lcd">@section lcd<a class="headerlink" href="#section-lcd" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 2180</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>#define LCD_LANGUAGE en
+
+#define DISPLAY_CHARSET_HD44780 CYRILLIC
+
+#define SDSUPPORT
+</code></pre></div>
+<p>LCD Model-specific:</p>
+<div class="highlight"><pre><span></span><code>#define MKS_MINI_12864_V3
+#define NEOPIXEL_LED
+
+    #define NEOPIXEL_TYPE          NEO_RGB
+</code></pre></div>
+<h4 id="section-extras_1">@section extras<a class="headerlink" href="#section-extras_1" title="Permanent link">#</a></h4>
+<blockquote>
+<p>line 2954</p>
+</blockquote>
+<h3 id="configuration_advh">Configuration_adv.h<a class="headerlink" href="#configuration_advh" title="Permanent link">#</a></h3>
+<ul>
+<li><code>QUICK_HOME</code> </li>
+<li><code>BABYSTEPPING</code></li>
+<li><code>NO_VOLUMETRICS</code></li>
+</ul>
+<h3 id="bl-touch-config">BL Touch Config<a class="headerlink" href="#bl-touch-config" title="Permanent link">#</a></h3>
+<p><a href="https://3dwork.io/en/configure-bltouch-in-marlin/">Configure Bl-Touch in Marlin 2.0.x</a></p>
+<div class="highlight"><pre><span></span><code>#define Z_MIN_ENDSTOP_INVERTING false
+
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+
+#define BLTOUCH
+
+#define NOZZLE_TO_PROBE_OFFSET { 41, 8, 0 }
+
+#define MULTIPLE_PROBING 2
+
+#define Z_MIN_PROBE_REPEATABILITY_TEST
+
+#define X_BED_SIZE 380
+#define Y_BED_SIZE 250
+
+#define AUTO_BED_LEVELING_BILINEAR
+
+#define G26_MESH_VALIDATION
+
+#define GRID_MAX_POINTS_X 4
+#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
+
+#define Z_SAFE_HOMING
+
+
+#define RESTORE_LEVELING_AFTER_G28
+</code></pre></div>
+<h2 id="3d-printed-parts">3d-printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">#</a></h2>
+<h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:4278682">Big Upgrade</a> (partly installed)</li>
+<li><a href="https://www.thingiverse.com/thing:2168986">Z-Axis G2T Belt Relocation</a></li>
+<li><a href="https://www.thingiverse.com/thing:2189890">BL-Touch mount</a></li>
+</ul>
+<h3 id="not-tested">Not tested<a class="headerlink" href="#not-tested" title="Permanent link">#</a></h3>
+<h4 id="mechanics">Mechanics<a class="headerlink" href="#mechanics" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2569059">Y-Carriage MGN12 Conversion</a></li>
+<li><a href="https://www.thingiverse.com/thing:2566111">MGN12 Guide Tool for 2040 Extrusion</a></li>
+<li><a href="https://www.thingiverse.com/thing:1918783">HE cable management</a></li>
+<li><a href="https://www.thingiverse.com/thing:1858082">Corner Plates v1</a></li>
+<li><a href="https://www.thingiverse.com/thing:2016601">Corner Plates v2</a></li>
+<li><a href="https://www.thingiverse.com/thing:2063853">Corner Plates v3 (thick)</a></li>
+<li><a href="https://www.thingiverse.com/thing:2302989">Heated Bed Cable Chain Lock</a></li>
+<li><a href="https://www.thingiverse.com/thing:3309080">X Belt Tensioner v1</a></li>
+<li><a href="https://www.thingiverse.com/thing:4648374">X Belt Tensioner v2</a></li>
+</ul>
+<h4 id="electronics-case">Electronics Case<a class="headerlink" href="#electronics-case" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2346801">Electronics housing upgrade</a></li>
+<li><a href="https://www.thingiverse.com/thing:2672795">Rear opening cap</a></li>
 </ul>
 
               
@@ -1065,7 +1777,7 @@ Remaps are saved as <code>.rmp</code> files in directory: <code>/opt/retropie/co
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../project_smartable/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rotary table for 3D photography" rel="prev">
+        <a href="../machines_r2d2_log/" class="md-footer__link md-footer__link--prev" aria-label="Previous: R2D2 Modifications Log" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1074,20 +1786,20 @@ Remaps are saved as <code>.rmp</code> files in directory: <code>/opt/retropie/co
               <span class="md-footer__direction">
                 Previous
               </span>
-              Rotary table for 3D photography
+              R2D2 Modifications Log
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ru_choosing_cad_software_formlabs/" class="md-footer__link md-footer__link--next" aria-label="Next: Гайд по выбору CAD-программы от Formlabs" rel="next">
+        <a href="../projects_smartable/" class="md-footer__link md-footer__link--next" aria-label="Next: Rotary table for 3D photography" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Гайд по выбору CAD-программы от Formlabs
+              Rotary table for 3D photography
             </div>
           </div>
           <div class="md-footer__button md-icon">
