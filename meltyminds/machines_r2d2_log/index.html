@@ -15,7 +15,7 @@
     
     
       
-        <title>R2D2 Modifications Log - lejbronika</title>
+        <title>Melty Modifications Log - lejbronika</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#r2d2-modifications-log" class="md-skip">
+        <a href="#melty-modifications-log" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              R2D2 Modifications Log
+              Melty Modifications Log
             
           </span>
         </div>
@@ -479,12 +479,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          R2D2 Modifications Log
+          Melty Modifications Log
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        R2D2 Modifications Log
+        Melty Modifications Log
       </a>
       
         
@@ -680,6 +680,20 @@
           <li class="md-nav__item">
   <a href="#configuration_advh" class="md-nav__link">
     Configuration_adv.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionh" class="md-nav__link">
+    Version.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_bootscreenh" class="md-nav__link">
+    _Bootscreen.h
   </a>
   
 </li>
@@ -1373,6 +1387,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#versionh" class="md-nav__link">
+    Version.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_bootscreenh" class="md-nav__link">
+    _Bootscreen.h
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1438,34 +1466,30 @@
 
 
 
-<h1 id="r2d2-modifications-log">R2D2 Modifications Log<a class="headerlink" href="#r2d2-modifications-log" title="Permanent link">#</a></h1>
+<h1 id="melty-modifications-log">Melty Modifications Log<a class="headerlink" href="#melty-modifications-log" title="Permanent link">#</a></h1>
 <p><img alt="R2D2" src="../../media/img/meltyminds/machines/r2d2.jpg" /></p>
 <h2 id="marlin-configuration">Marlin Configuration<a class="headerlink" href="#marlin-configuration" title="Permanent link">#</a></h2>
 <blockquote>
-<p>v2.0.9.1, branch <code>heisenberg 0.0.1</code></p>
+<p>v2.0.9.3, branch <code>melty_heisenberg_1.0.0</code></p>
 </blockquote>
-<p><a href="https://github.com/Ultimaker/Ultimaker2Marlin">Ultimaker 2 Marlin example</a></p>
+<ul>
+<li><a href="https://github.com/Ultimaker/Ultimaker2Marlin">Ultimaker 2 Marlin example</a></li>
+<li><a href="https://github.com/lejbronika/Marlin_MeltyMinds">Marlin Fork</a></li>
+</ul>
 <h3 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h3>
 <h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 69</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define STRING_CONFIG_H_AUTHOR &quot;lejbron&quot;
+#define CUSTOM_VERSION_FILE Version.h
+#define SHOW_CUSTOM_BOOTSCREEN
 </code></pre></div>
 <h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 95</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define BAUDRATE 250000
 
     #define MOTHERBOARD BOARD_MKS_GEN_13
 
-#define CUSTOM_MACHINE_NAME &quot;melty&quot;
+#define CUSTOM_MACHINE_NAME &quot;Melty&quot;
 </code></pre></div>
 <h4 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 191</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define EXTRUDERS 1
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
 </code></pre></div>
@@ -1474,9 +1498,6 @@
 <p>line 357</p>
 </blockquote>
 <h4 id="section-temperature">@section temperature<a class="headerlink" href="#section-temperature" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 395</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_BED 1
 
@@ -1495,19 +1516,13 @@
 //#define PIDTEMPBED
 </code></pre></div>
 <h4 id="section-extruder_1">@section extruder<a class="headerlink" href="#section-extruder_1" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 682</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>#define EXTRUDE_MINTEMP 200
+<div class="highlight"><pre><span></span><code>#define EXTRUDE_MINTEMP 170 // set 5 for extruder flow calibration
 </code></pre></div>
 <h4 id="section-machine_2">@section machine<a class="headerlink" href="#section-machine_2" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 727</p>
 </blockquote>
 <h4 id="section-homing">@section homing<a class="headerlink" href="#section-homing" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 743</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define USE_XMIN_PLUG
 #define USE_YMAX_PLUG
 #define USE_ZMAX_PLUG
@@ -1515,6 +1530,8 @@
 #define ENDSTOPPULLUPS
 
 #define X_MIN_ENDSTOP_INVERTING true
+#define Y_MAX_ENDSTOP_INVERTING true
+#define Z_MAX_ENDSTOP_INVERTING true
 
 #define X_DRIVER_TYPE  TMC2209_STANDALONE
 #define Y_DRIVER_TYPE  TMC2209_STANDALONE
@@ -1522,9 +1539,6 @@
 #define E0_DRIVER_TYPE TMC2209_STANDALONE
 </code></pre></div>
 <h4 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 876</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
 #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
 #define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 250, 10000 }
@@ -1559,31 +1573,19 @@
 <p>line 1284</p>
 </blockquote>
 <h4 id="section-machine_3">@section machine<a class="headerlink" href="#section-machine_3" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1289</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define INVERT_X_DIR true
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 </code></pre></div>
 <h4 id="section-extruder_3">@section extruder<a class="headerlink" href="#section-extruder_3" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1299</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define INVERT_E0_DIR true
 </code></pre></div>
 <h4 id="section-homing_1">@section homing<a class="headerlink" href="#section-homing_1" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1311</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define X_HOME_DIR -1
 #define Y_HOME_DIR 1
 #define Z_HOME_DIR 1
 </code></pre></div>
 <h4 id="section-machine_4">@section machine<a class="headerlink" href="#section-machine_4" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1337</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define X_BED_SIZE 195
 #define Y_BED_SIZE 195
 
@@ -1592,12 +1594,9 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 193
 </code></pre></div>
 <h4 id="section-calibrate">@section calibrate<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1470</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define MESH_BED_LEVELING
 
 //#define MANUAL_PROBE_START_Z 0.1
@@ -1617,9 +1616,6 @@
 <p>line 1723</p>
 </blockquote>
 <h4 id="section-extras">@section extras<a class="headerlink" href="#section-extras" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 1784</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define EEPROM_SETTINGS
 </code></pre></div>
 <h4 id="section-temperature_1">@section temperature<a class="headerlink" href="#section-temperature_1" title="Permanent link">#</a></h4>
@@ -1627,9 +1623,6 @@
 <p>line 1823</p>
 </blockquote>
 <h4 id="section-lcd">@section lcd<a class="headerlink" href="#section-lcd" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 2017</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define LCD_LANGUAGE en
 
 #define DISPLAY_CHARSET_HD44780 CYRILLIC
@@ -1656,6 +1649,8 @@
 </li>
 <li><code>NO_VOLUMETRICS</code></li>
 </ul>
+<h3 id="versionh">Version.h<a class="headerlink" href="#versionh" title="Permanent link">#</a></h3>
+<h3 id="_bootscreenh">_Bootscreen.h<a class="headerlink" href="#_bootscreenh" title="Permanent link">#</a></h3>
 <h2 id="3d-printed-parts">3d-printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">#</a></h2>
 <h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
 <h3 id="not-tested">Not tested<a class="headerlink" href="#not-tested" title="Permanent link">#</a></h3>

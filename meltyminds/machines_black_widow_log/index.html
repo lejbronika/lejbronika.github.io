@@ -470,7 +470,7 @@
   
     <li class="md-nav__item">
       <a href="../machines_r2d2_log/" class="md-nav__link">
-        R2D2 Modifications Log
+        Melty Modifications Log
       </a>
     </li>
   
@@ -738,11 +738,38 @@
     Mechanics
   </a>
   
+    <nav class="md-nav" aria-label="Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mgn12-upgrades" class="md-nav__link">
+    MGN12 upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
   <a href="#electronics-case" class="md-nav__link">
     Electronics Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild-projects" class="md-nav__link">
+    Rebuild projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
   </a>
   
 </li>
@@ -1440,11 +1467,38 @@
     Mechanics
   </a>
   
+    <nav class="md-nav" aria-label="Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mgn12-upgrades" class="md-nav__link">
+    MGN12 upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
   <a href="#electronics-case" class="md-nav__link">
     Electronics Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild-projects" class="md-nav__link">
+    Rebuild projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
   </a>
   
 </li>
@@ -1503,30 +1557,18 @@
 </ul>
 <h3 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h3>
 <h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 69</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define STRING_CONFIG_H_AUTHOR &quot;lejbron&quot;
+#define CUSTOM_VERSION_FILE Version.h
+#define SHOW_CUSTOM_BOOTSCREEN
 </code></pre></div>
 <h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 95</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define BAUDRATE 250000
 
     #define MOTHERBOARD BOARD_MKS_GEN_13
 
 #define CUSTOM_MACHINE_NAME &quot;Black Widow&quot;
-
-#define X_DRIVER_TYPE  DRV8825
-#define Y_DRIVER_TYPE  DRV8825
-#define Z_DRIVER_TYPE  DRV8825
-#define E0_DRIVER_TYPE DRV8825
 </code></pre></div>
 <h4 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h4>
-<blockquote>
-<p>line 233</p>
-</blockquote>
 <div class="highlight"><pre><span></span><code>#define EXTRUDERS 1
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
 </code></pre></div>
@@ -1539,7 +1581,7 @@
 <p>line 446</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code>#define TEMP_SENSOR_0 61
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 11
 
 #define TEMP_HYSTERESIS              5
 
@@ -1573,6 +1615,11 @@
 
 #define X_MIN_ENDSTOP_INVERTING true
 #define Y_MIN_ENDSTOP_INVERTING true
+
+#define X_DRIVER_TYPE  DRV8825
+#define Y_DRIVER_TYPE  DRV8825
+#define Z_DRIVER_TYPE  DRV8825
+#define E0_DRIVER_TYPE DRV8825
 </code></pre></div>
 <h4 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1637,15 +1684,15 @@
 <blockquote>
 <p>line 1487</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 380
-#define Y_BED_SIZE 250
+<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 320
+#define Y_BED_SIZE 220
 
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 280
 </code></pre></div>
 <h4 id="section-calibrate">@section calibrate<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1706,23 +1753,22 @@
 <li><code>NO_VOLUMETRICS</code></li>
 </ul>
 <h3 id="bl-touch-config">BL Touch Config<a class="headerlink" href="#bl-touch-config" title="Permanent link">#</a></h3>
-<p><a href="https://3dwork.io/en/configure-bltouch-in-marlin/">Configure Bl-Touch in Marlin 2.0.x</a></p>
-<div class="highlight"><pre><span></span><code>#define Z_MIN_ENDSTOP_INVERTING false
+<p><a href="https://3dwork.io/en/configure-bltouch-in-marlin/">Configure Bl-Touch in Marlin 2.0.x</a>
+<a href="https://www.youtube.com/watch?v=oJgKQKbN8nE">K3D yiutube guide</a></p>
+<p><div class="highlight"><pre><span></span><code>#define Z_MIN_ENDSTOP_INVERTING false
 
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 #define BLTOUCH
 
-#define NOZZLE_TO_PROBE_OFFSET { 41, 8, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 41, 8, -2 }
 
 #define MULTIPLE_PROBING 2
 
 #define Z_MIN_PROBE_REPEATABILITY_TEST
 
-#define X_BED_SIZE 380
-#define Y_BED_SIZE 250
-
 #define AUTO_BED_LEVELING_BILINEAR
+#define RESTORE_LEVELING_AFTER_G28
 
 #define G26_MESH_VALIDATION
 
@@ -1730,10 +1776,24 @@
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 #define Z_SAFE_HOMING
-
-
-#define RESTORE_LEVELING_AFTER_G28
 </code></pre></div>
+- Обнулить Z-offset
+- выполнить autohome
+- отключить концевики
+- выставить Z-0ffset
+- сохранить значения
+- включить концевики</p>
+<p>G-Code:</p>
+<div class="highlight"><pre><span></span><code>G28
+G1 F500 Z0
+M211 S0 ; disable endstops
+G91 ; akternative coordinates
+G1 Zx ...
+M211 S1 ; enable endstops
+G90 ; absolute coordinates
+</code></pre></div>
+<p>z_offset = calculated_offsed + paper_thicknes (~0.1mm)</p>
+<p>TBW_z_offset = -2,375 + 0,1 = -2,275</p>
 <h2 id="3d-printed-parts">3d-printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">#</a></h2>
 <h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
 <ul>
@@ -1742,10 +1802,12 @@
 <li><a href="https://www.thingiverse.com/thing:2189890">BL-Touch mount</a></li>
 </ul>
 <h3 id="not-tested">Not tested<a class="headerlink" href="#not-tested" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2175680">Nozzle fan duct</a></li>
+</ul>
 <h4 id="mechanics">Mechanics<a class="headerlink" href="#mechanics" title="Permanent link">#</a></h4>
 <ul>
-<li><a href="https://www.thingiverse.com/thing:2569059">Y-Carriage MGN12 Conversion</a></li>
-<li><a href="https://www.thingiverse.com/thing:2566111">MGN12 Guide Tool for 2040 Extrusion</a></li>
+<li><a href="https://www.thingiverse.com/thing:1789293">!5 Degree extruder mount</a></li>
 <li><a href="https://www.thingiverse.com/thing:1918783">HE cable management</a></li>
 <li><a href="https://www.thingiverse.com/thing:1858082">Corner Plates v1</a></li>
 <li><a href="https://www.thingiverse.com/thing:2016601">Corner Plates v2</a></li>
@@ -1754,10 +1816,25 @@
 <li><a href="https://www.thingiverse.com/thing:3309080">X Belt Tensioner v1</a></li>
 <li><a href="https://www.thingiverse.com/thing:4648374">X Belt Tensioner v2</a></li>
 </ul>
+<h5 id="mgn12-upgrades">MGN12 upgrades<a class="headerlink" href="#mgn12-upgrades" title="Permanent link">#</a></h5>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2566111">X-carriage MGN12 conversion</a></li>
+<li><a href="https://www.thingiverse.com/thing:2569059">Y-Carriage MGN12 Conversion</a></li>
+<li><a href="https://www.thingiverse.com/thing:2566111">MGN12 Guide Tool for 2040 Extrusion</a></li>
+</ul>
 <h4 id="electronics-case">Electronics Case<a class="headerlink" href="#electronics-case" title="Permanent link">#</a></h4>
 <ul>
+<li><a href="https://www.thingiverse.com/thing:2125506">Original case</a></li>
 <li><a href="https://www.thingiverse.com/thing:2346801">Electronics housing upgrade</a></li>
 <li><a href="https://www.thingiverse.com/thing:2672795">Rear opening cap</a></li>
+</ul>
+<h4 id="rebuild-projects">Rebuild projects<a class="headerlink" href="#rebuild-projects" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2984957">MGN12 XY upgrade</a></li>
+</ul>
+<h4 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:2620241">RPi Mount</a></li>
 </ul>
 
               
@@ -1777,7 +1854,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../machines_r2d2_log/" class="md-footer__link md-footer__link--prev" aria-label="Previous: R2D2 Modifications Log" rel="prev">
+        <a href="../machines_r2d2_log/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Melty Modifications Log" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1786,7 +1863,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              R2D2 Modifications Log
+              Melty Modifications Log
             </div>
           </div>
         </a>
