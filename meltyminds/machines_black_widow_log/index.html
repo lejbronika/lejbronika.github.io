@@ -703,6 +703,19 @@
     BL Touch Config
   </a>
   
+    <nav class="md-nav" aria-label="BL Touch Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offset-calibration" class="md-nav__link">
+    Offset Calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1432,6 +1445,19 @@
     BL Touch Config
   </a>
   
+    <nav class="md-nav" aria-label="BL Touch Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offset-calibration" class="md-nav__link">
+    Offset Calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1684,7 +1710,7 @@
 <blockquote>
 <p>line 1487</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 320
+<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 348
 #define Y_BED_SIZE 220
 
 #define X_MIN_POS 0
@@ -1721,6 +1747,8 @@
 <p>line 1947</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code>#define EEPROM_SETTINGS
+
+#define EEPROM_INIT_NOW
 </code></pre></div>
 <h4 id="section-temperature_1">@section temperature<a class="headerlink" href="#section-temperature_1" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1761,7 +1789,7 @@
 
 #define BLTOUCH
 
-#define NOZZLE_TO_PROBE_OFFSET { 41, 8, -2 }
+#define NOZZLE_TO_PROBE_OFFSET { -11, -37, -2 }
 
 #define MULTIPLE_PROBING 2
 
@@ -1776,6 +1804,11 @@
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 #define Z_SAFE_HOMING
+
+#if ENABLED(Z_SAFE_HOMING)
+#define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2) // X point for Z homing when homing all axes (G28).
+#define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2) // Y point for Z homing when homing all axes (G28).
+#endif
 </code></pre></div>
 - Обнулить Z-offset
 - выполнить autohome
@@ -1789,11 +1822,23 @@ G1 F500 Z0
 M211 S0 ; disable endstops
 G91 ; akternative coordinates
 G1 Zx ...
+M114 ; get current position
 M211 S1 ; enable endstops
 G90 ; absolute coordinates
 </code></pre></div>
+<h4 id="offset-calibration">Offset Calibration<a class="headerlink" href="#offset-calibration" title="Permanent link">#</a></h4>
+<ul>
+<li>Connect to PC</li>
+<li>!preheat!</li>
+<li><code>G28</code></li>
+<li><code>G1 F500 Z0</code></li>
+<li><code>Configuration</code> -&gt; <code>Probe Z Offset</code></li>
+<li>Calibrate with sheet of paper</li>
+<li><code>Configuration</code> -&gt; <code>Store Settings</code></li>
+<li>Check with sheet of paper: <code>G28 G1 F500 Z0</code></li>
+</ul>
 <p>z_offset = calculated_offsed + paper_thicknes (~0.1mm)</p>
-<p>TBW_z_offset = -2,375 + 0,1 = -2,275</p>
+<p>TBW_z_offset = -2,375 + 0,35 = -2,275</p>
 <h2 id="3d-printed-parts">3d-printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">#</a></h2>
 <h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
 <ul>
