@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://example.com/howto/sphinx_to_gh_pages_rus/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,11 +19,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -751,6 +752,8 @@
         
           
         
+          
+        
       
       
         
@@ -781,6 +784,20 @@
     <li class="md-nav__item">
       <a href="../create_linux_live_usb/" class="md-nav__link">
         Create Linux Live-usb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../turn_rpi_into_wap/" class="md-nav__link">
+        How to turn RPi into WAP
       </a>
     </li>
   
@@ -1165,89 +1182,90 @@
 <h1 id="sphinx-github-pages">Публикация sphinx-документации на GitHub Pages<a class="headerlink" href="#sphinx-github-pages" title="Permanent link">#</a></h1>
 <p>Первоисточник доступен по <a href="https://daler.github.io/sphinxdoc-test/includeme.html">ссылке</a>.</p>
 <h2 id="_1">Настроить основной репозиторий<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test
+<pre><code>mkdir sphinxdoc-test
 cd sphinxdoc-test
 git init
 touch README
 git add README
-git commit -m &#39;first commit&#39;
+git commit -m 'first commit'
 git remote add origin git@github.com:___/sphinxdoc-test.git
 git push origin master
-</code></pre></div>
+</code></pre>
 <h2 id="sphinx-">Создать sphinx-проект в основном репозитории<a class="headerlink" href="#sphinx-" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test/docs
+<pre><code>mkdir sphinxdoc-test/docs
 cd docs
 sphinx-quickstart
-</code></pre></div>
+</code></pre>
 <h2 id="_2">Настроить папку для сборки<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>Для сборки сайта с документацией и дальнейшей публикацией на GitHub Pages
 необходимо создать ещё одну отдельную папку и настроить её должным образом.</p>
 <h3 id="_3">Создать папку<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>cd ..
+<pre><code>cd ..
 mkdir sphixdoc-test-docs
 cd sphixdoc-test-docs
-</code></pre></div>
+</code></pre>
 <h3 id="html">Клонировать репозиторий в папку <code>html</code><a class="headerlink" href="#html" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>git clone git@github.com:___/sphinxdoc-test.git html
+<pre><code>git clone git@github.com:___/sphinxdoc-test.git html
 cd html
-</code></pre></div>
+</code></pre>
 <h3 id="_4">Создть ветку для публикации<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>git branch gh-pages
-</code></pre></div>
+<pre><code>git branch gh-pages
+</code></pre>
 <h3 id="git">Настроить git для публикации<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
+<pre><code>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
 rm .git/index
 git clean -fdx
-</code></pre></div>
+</code></pre>
 <p><code>symbolic-ref</code> - создаёт или обновляет символьную ссылку, переключая указатель
 на указанную в аргументах ветку.</p>
 <p><code>git clean -fdx</code> - полностью очищает текущую папку.</p>
 <h2 id="makefile">Изменить <code>Makefile</code><a class="headerlink" href="#makefile" title="Permanent link">#</a></h2>
 <p>В скрипте сборки необходимо изменить значение параметра <code>BUILDDIR</code>, указав путь
 к ранее созданной папке для публикации.</p>
-<div class="highlight"><pre><span></span><code>BUILDDIR=../../sphinx-test-docs
-</code></pre></div>
+<pre><code>BUILDDIR=../../sphinx-test-docs
+</code></pre>
 <p>Для упрощения процесса публикации изменений, в <code>Makefile</code> добавьте шаг отправки
 данных в репозиторий:</p>
-<div class="highlight"><pre><span></span><code>cd $(BUILDDIR)/html
+<pre><code>cd $(BUILDDIR)/html
 git add .
 git commit -m &quot;rebuilt docs&quot;
 git push origin gh-pages
-</code></pre></div>
+</code></pre>
 <h2 id="nojekyll">Добавить <code>.nojekyll</code> файл<a class="headerlink" href="#nojekyll" title="Permanent link">#</a></h2>
 <p>Файл <code>.nojekyll</code> необходимо добавить в репозиторий для того, чтобы стандартные
 парсеры github игнорировали страницы, сгенерированные <code>sphinx</code>:</p>
-<div class="highlight"><pre><span></span><code>cd sphinxdoc-test-docs/html
+<pre><code>cd sphinxdoc-test-docs/html
 touch .nojekyll
 git add .nojekyll
 git commit -m &quot;added .nojekyll&quot;
-</code></pre></div>
+</code></pre>
 <h2 id="_5">Настройка на другой машине<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>При необходимости воспроизвести рабочую среду на другой машине необходимо:</p>
 <ol>
 <li>Клонировать основной репозиторий:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>git clone git@github.com:___/sphinxdoc-test.git
-</code></pre></div>
+<pre><code>git clone git@github.com:___/sphinxdoc-test.git
+</code></pre>
 <ol>
 <li>Настроить папку для сборки документации:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>mkdir sphinxdoc-test-docs
+<pre><code>mkdir sphinxdoc-test-docs
 cd sphinxdoc-test-docs
 git clone git@github.com:___/sphinxdoc-test.git html
-</code></pre></div>
+</code></pre>
 <ol>
 <li>Добавить локальную ветку для отслеживания ветки <code>gh-pages</code>:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>git checkout -b gh-pages remotes/origin/gh-pages
-</code></pre></div>
+<pre><code>git checkout -b gh-pages remotes/origin/gh-pages
+</code></pre>
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1256,7 +1274,8 @@ git clone git@github.com:___/sphinxdoc-test.git html
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../sphinx_to_gh_pages_eng/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publish sphinx-generated docs on GitHub Pages" rel="prev">
@@ -1320,10 +1339,10 @@ git clone git@github.com:___/sphinxdoc-test.git html
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>

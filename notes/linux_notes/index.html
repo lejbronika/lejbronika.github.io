@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://example.com/notes/linux_notes/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,11 +19,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -749,6 +750,8 @@
         
           
         
+          
+        
       
       
         
@@ -779,6 +782,20 @@
     <li class="md-nav__item">
       <a href="../../howto/create_linux_live_usb/" class="md-nav__link">
         Create Linux Live-usb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/turn_rpi_into_wap/" class="md-nav__link">
+        How to turn RPi into WAP
       </a>
     </li>
   
@@ -923,6 +940,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-filesystem-hierarchy-standard-fhs" class="md-nav__link">
+    The Filesystem Hierarchy Standard (FHS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environmental-variables" class="md-nav__link">
+    Environmental variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-configuration" class="md-nav__link">
+    Services configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Services configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands-usage-and-examples" class="md-nav__link">
     Commands usage and examples
   </a>
@@ -969,6 +1020,20 @@
   
     <nav class="md-nav" aria-label="VA">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-host-name" class="md-nav__link">
+    How to change host name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-unmask-systemd-service" class="md-nav__link">
+    How to unmask systemd service
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#make-file-executable" class="md-nav__link">
@@ -1045,6 +1110,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-filesystem-hierarchy-standard-fhs" class="md-nav__link">
+    The Filesystem Hierarchy Standard (FHS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environmental-variables" class="md-nav__link">
+    Environmental variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-configuration" class="md-nav__link">
+    Services configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Services configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands-usage-and-examples" class="md-nav__link">
     Commands usage and examples
   </a>
@@ -1093,6 +1192,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-to-change-host-name" class="md-nav__link">
+    How to change host name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-unmask-systemd-service" class="md-nav__link">
+    How to unmask systemd service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#make-file-executable" class="md-nav__link">
     Make file executable
   </a>
@@ -1139,6 +1252,58 @@
 
 
 <h1 id="linux-notes">Linux Notes<a class="headerlink" href="#linux-notes" title="Permanent link">#</a></h1>
+<h2 id="the-filesystem-hierarchy-standard-fhs">The Filesystem Hierarchy Standard (FHS)<a class="headerlink" href="#the-filesystem-hierarchy-standard-fhs" title="Permanent link">#</a></h2>
+<ul>
+<li><code>/bin/</code>: basic programs.</li>
+<li><code>/boot/</code>: Kali Linux kernel and other files required for its early boot process.</li>
+<li><code>/dev/</code>: device files.</li>
+<li><code>/etc/</code>: configuration files.</li>
+<li><code>/home/</code>: user's personal files.</li>
+<li><code>/lib/</code>: basic libraries.</li>
+<li><code>/media/</code>: mount points for removable devices (CD/DVD-ROM, USB keys, and so on).</li>
+<li><code>/mnt/</code>: temporary mount point.</li>
+<li><code>/opt/</code>: extra applications provided by third parties.</li>
+<li><code>/root/</code>: administrator's (root's) personal files.</li>
+<li><code>/run/</code>: volatile runtime data that does not persist across reboots (not yet included in the FHS).</li>
+<li><code>/sbin/</code>: system programs.</li>
+<li><code>/srv/</code>: data used by servers hosted on this system.</li>
+<li><code>/tmp/</code>: temporary files (this directory is often emptied at boot).</li>
+<li><code>/usr/</code>: applications (this directory is further subdivided into bin, sbin, lib according to the same logic as in the root directory) Furthermore, <code>/usr/share/</code> contains architecture-independent data. The <code>/usr/local/</code> directory is meant to be used by the administrator for installing applications manually without overwriting files handled by the packaging system (<code>dpkg</code>).</li>
+<li><code>/var/</code>: variable data handled by services. This includes log files, queues, spools, and caches.</li>
+<li><code>/proc/</code> and <code>/sys/</code> are specific to the Linux kernel (and not part of the FHS). They are used by the kernel for exporting data to user space.</li>
+</ul>
+<h2 id="environmental-variables">Environmental variables<a class="headerlink" href="#environmental-variables" title="Permanent link">#</a></h2>
+<ul>
+<li>System-wide: <code>/etc/profile/</code>.</li>
+<li>Per user: <code>~/.profile</code>.</li>
+</ul>
+<h2 id="services-configuration">Services configuration<a class="headerlink" href="#services-configuration" title="Permanent link">#</a></h2>
+<h3 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">#</a></h3>
+<ul>
+<li>For safety reasons after installation generate new SSH host keys:</li>
+</ul>
+<pre><code>sudo rm /etc/ssh/ssh_host_*
+</code></pre>
+<pre><code>sudo dpkg-reconfigure openssh-server
+</code></pre>
+<ul>
+<li>Update <code>/etc/ssh/sshd_config</code> file:</li>
+</ul>
+<pre><code>StrictModes yes
+</code></pre>
+<ul>
+<li>Create <code>~/.ssh/config</code> file:</li>
+</ul>
+<pre><code>Host hostname
+    HostName 127.0.0.1
+    Port 22
+    ForwardX11 no
+    ClientAliveInterval 360
+    ClientEmptyPasswords no
+    AllowUsers kali
+    Protocol 2
+    PasswordAuthentication no
+</code></pre>
 <h2 id="commands-usage-and-examples">Commands usage and examples<a class="headerlink" href="#commands-usage-and-examples" title="Permanent link">#</a></h2>
 <h3 id="rsync"><code>rsync</code><a class="headerlink" href="#rsync" title="Permanent link">#</a></h3>
 <p><code>rsync [OPTION...] SRC... [DST...]</code></p>
@@ -1153,39 +1318,59 @@
 <ul>
 <li>find by date and sync:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo find SRC -type f -newermt DATE_BEGIN ! -newermt DATE_END &gt; files_to_sync.txt
+<pre><code>sudo find SRC -type f -newermt DATE_BEGIN ! -newermt DATE_END &gt; files_to_sync.txt
 
 sudo rsync -avP `cat files_to_sync.txt` DST
 
 sudo rsync -avP USER@HOST:SRC DST
-</code></pre></div>
+</code></pre>
 <h2 id="va">VA<a class="headerlink" href="#va" title="Permanent link">#</a></h2>
+<h3 id="how-to-change-host-name">How to change host name<a class="headerlink" href="#how-to-change-host-name" title="Permanent link">#</a></h3>
+<p>To change machine name on Linux just edit the <code>/etc/hostname</code> and <code>/etc/hosts</code> files and reboot the system. </p>
+<h3 id="how-to-unmask-systemd-service">How to unmask systemd service<a class="headerlink" href="#how-to-unmask-systemd-service" title="Permanent link">#</a></h3>
+<p>Based on <a href="https://unix.stackexchange.com/questions/308904/systemd-how-to-unmask-a-service-whose-unit-file-is-empty">unix.stackexchange</a> answer:</p>
+<ul>
+<li>Check that a file is a symlink to <code>/dev/null</code>:
+  <code>file /etc/systemd/system/my_app.service</code>
+  <code>file /lib/systemd/system/my_app.service</code></li>
+<li>Delete the symlink:
+  <code>sudo rm /etc/systemd/system/your_app.service</code></li>
+<li>Reload systemd daemon as you changed a service:
+  <code>sudo systemctl daemon-reload</code></li>
+<li>Check service status:
+  <code>systemctl status my_app</code></li>
+</ul>
 <h3 id="make-file-executable">Make file executable<a class="headerlink" href="#make-file-executable" title="Permanent link">#</a></h3>
 <p>To make file executable use this command:</p>
-<div class="highlight"><pre><span></span><code>chmod u+x &lt;file&gt;
-</code></pre></div>
+<pre><code>chmod u+x &lt;file&gt;
+</code></pre>
 <h3 id="add-opacity-to-lxterminal">Add opacity to Lxterminal<a class="headerlink" href="#add-opacity-to-lxterminal" title="Permanent link">#</a></h3>
 <ul>
-<li>Install <a href="https://github.com/chjj/compton">Compton</a>
-<div class="highlight"><pre><span></span><code>sudo apt-get install compton
-</code></pre></div></li>
+<li>Install <a href="https://github.com/chjj/compton">Compton</a></li>
+</ul>
+<pre><code>sudo apt-get install compton
+</code></pre>
+<ul>
 <li>Use <code>xprop</code> command to get necessary app window properties.</li>
 <li>Search for <code>WM_CLASS(STRING) = APP_NAME</code> property.</li>
 <li>Use found name in <code>class_g</code> argument.</li>
-<li>Add opacity settings for  <code>~/.config/compton.conf</code>:
-<div class="highlight"><pre><span></span><code>sudo &#39;opacity-rule = [&quot;75:class_g *= &#39;APP_NAME&#39;&quot;]&#39; &gt; ~/.config/compton.conf
-</code></pre></div></li>
-<li>Add <code>compton</code> to <code>~/.config/lxsession/Lubuntu/autostart</code>
-<div class="highlight"><pre><span></span><code>sudo &#39;compton&#39; &gt; ~/.config/lxsession/Lubuntu/autostart
-</code></pre></div></li>
+<li>Add opacity settings for  <code>~/.config/compton.conf</code>:</li>
 </ul>
+<pre><code>sudo 'opacity-rule = [&quot;75:class_g *= 'APP_NAME'&quot;]' &gt; ~/.config/compton.conf
+</code></pre>
+<ul>
+<li>Add <code>compton</code> to <code>~/.config/lxsession/Lubuntu/autostart</code></li>
+</ul>
+<pre><code>sudo 'compton' &gt; ~/.config/lxsession/Lubuntu/autostart
+</code></pre>
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1194,7 +1379,8 @@ sudo rsync -avP USER@HOST:SRC DST
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../win_notes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Windows" rel="prev">
@@ -1258,10 +1444,10 @@ sudo rsync -avP USER@HOST:SRC DST
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>

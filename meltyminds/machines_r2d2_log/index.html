@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://example.com/meltyminds/machines_r2d2_log/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,11 +19,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -1013,6 +1014,8 @@
         
           
         
+          
+        
       
       
         
@@ -1043,6 +1046,20 @@
     <li class="md-nav__item">
       <a href="../../howto/create_linux_live_usb/" class="md-nav__link">
         Create Linux Live-usb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/turn_rpi_into_wap/" class="md-nav__link">
+        How to turn RPi into WAP
       </a>
     </li>
   
@@ -1478,27 +1495,27 @@
 </ul>
 <h3 id="configurationh">Configuration.h<a class="headerlink" href="#configurationh" title="Permanent link">#</a></h3>
 <h4 id="section-info">@section info<a class="headerlink" href="#section-info" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define STRING_CONFIG_H_AUTHOR &quot;lejbron&quot;
+<pre><code>#define STRING_CONFIG_H_AUTHOR &quot;lejbron&quot;
 #define CUSTOM_VERSION_FILE Version.h
 #define SHOW_CUSTOM_BOOTSCREEN
-</code></pre></div>
+</code></pre>
 <h4 id="section-machine">@section machine<a class="headerlink" href="#section-machine" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define BAUDRATE 250000
+<pre><code>#define BAUDRATE 250000
 
     #define MOTHERBOARD BOARD_MKS_GEN_13
 
 #define CUSTOM_MACHINE_NAME &quot;Melty&quot;
-</code></pre></div>
+</code></pre>
 <h4 id="section-extruder">@section extruder<a class="headerlink" href="#section-extruder" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define EXTRUDERS 1
+<pre><code>#define EXTRUDERS 1
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
-</code></pre></div>
+</code></pre>
 <h4 id="section-machine_1">@section machine<a class="headerlink" href="#section-machine_1" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 357</p>
 </blockquote>
 <h4 id="section-temperature">@section temperature<a class="headerlink" href="#section-temperature" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define TEMP_SENSOR_0 13
+<pre><code>#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_BED 1
 
 #define TEMP_HYSTERESIS              5
@@ -1514,16 +1531,16 @@
     #define DEFAULT_Kd 37.64
 
 //#define PIDTEMPBED
-</code></pre></div>
+</code></pre>
 <h4 id="section-extruder_1">@section extruder<a class="headerlink" href="#section-extruder_1" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define EXTRUDE_MINTEMP 170 // set 5 for extruder flow calibration
-</code></pre></div>
+<pre><code>#define EXTRUDE_MINTEMP 170 // set 5 for extruder flow calibration
+</code></pre>
 <h4 id="section-machine_2">@section machine<a class="headerlink" href="#section-machine_2" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 727</p>
 </blockquote>
 <h4 id="section-homing">@section homing<a class="headerlink" href="#section-homing" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define USE_XMIN_PLUG
+<pre><code>#define USE_XMIN_PLUG
 #define USE_YMAX_PLUG
 #define USE_ZMAX_PLUG
 
@@ -1537,9 +1554,9 @@
 #define Y_DRIVER_TYPE  TMC2209_STANDALONE
 #define Z_DRIVER_TYPE  TMC2209_STANDALONE
 #define E0_DRIVER_TYPE TMC2209_STANDALONE
-</code></pre></div>
+</code></pre>
 <h4 id="section-motion">@section motion<a class="headerlink" href="#section-motion" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
+<pre><code>#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
 #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
 #define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 250, 10000 }
 
@@ -1555,15 +1572,11 @@
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (&lt; 1mm) with large junction angles (&gt; 135°).
 #endif
-</code></pre></div>
-<details class="info">
-<summary>Info</summary>
-<ul>
-<li><code>DEFAULT_ACCELERATION</code>: <code>P</code></li>
-<li><code>DEFAULT_RETRACT_ACCELERATION</code>: <code>R</code></li>
-<li><code>DEFAULT_TRAVEL_ACCELERATION</code>: <code>T</code></li>
-</ul>
-</details>
+</code></pre>
+<p>??? Info
+    - <code>DEFAULT_ACCELERATION</code>: <code>P</code>
+    - <code>DEFAULT_RETRACT_ACCELERATION</code>: <code>R</code>
+    - <code>DEFAULT_TRAVEL_ACCELERATION</code>: <code>T</code></p>
 <h4 id="section-probes">@section probes<a class="headerlink" href="#section-probes" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 990</p>
@@ -1573,20 +1586,20 @@
 <p>line 1284</p>
 </blockquote>
 <h4 id="section-machine_3">@section machine<a class="headerlink" href="#section-machine_3" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define INVERT_X_DIR true
+<pre><code>#define INVERT_X_DIR true
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
-</code></pre></div>
+</code></pre>
 <h4 id="section-extruder_3">@section extruder<a class="headerlink" href="#section-extruder_3" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define INVERT_E0_DIR true
-</code></pre></div>
+<pre><code>#define INVERT_E0_DIR true
+</code></pre>
 <h4 id="section-homing_1">@section homing<a class="headerlink" href="#section-homing_1" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define X_HOME_DIR -1
+<pre><code>#define X_HOME_DIR -1
 #define Y_HOME_DIR 1
 #define Z_HOME_DIR 1
-</code></pre></div>
+</code></pre>
 <h4 id="section-machine_4">@section machine<a class="headerlink" href="#section-machine_4" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define X_BED_SIZE 195
+<pre><code>#define X_BED_SIZE 195
 #define Y_BED_SIZE 195
 
 #define X_MIN_POS 0
@@ -1595,9 +1608,9 @@
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 193
-</code></pre></div>
+</code></pre>
 <h4 id="section-calibrate">@section calibrate<a class="headerlink" href="#section-calibrate" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define MESH_BED_LEVELING
+<pre><code>#define MESH_BED_LEVELING
 
 //#define MANUAL_PROBE_START_Z 0.1
 
@@ -1606,7 +1619,7 @@
 
 #define LCD_BED_LEVELING
 #define LEVEL_BED_CORNERS
-</code></pre></div>
+</code></pre>
 <h4 id="section-homing_2">@section homing<a class="headerlink" href="#section-homing_2" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 1687</p>
@@ -1616,23 +1629,29 @@
 <p>line 1723</p>
 </blockquote>
 <h4 id="section-extras">@section extras<a class="headerlink" href="#section-extras" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define EEPROM_SETTINGS
-</code></pre></div>
+<pre><code>#define EEPROM_SETTINGS
+</code></pre>
 <h4 id="section-temperature_1">@section temperature<a class="headerlink" href="#section-temperature_1" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 1823</p>
 </blockquote>
 <h4 id="section-lcd">@section lcd<a class="headerlink" href="#section-lcd" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>#define LCD_LANGUAGE en
+<pre><code>#define LCD_LANGUAGE en
 
 #define DISPLAY_CHARSET_HD44780 CYRILLIC
 
 #define SDSUPPORT
-</code></pre></div>
+</code></pre>
 <p>LCD Model-specific:</p>
-<div class="highlight"><pre><span></span><code>#define MINIPANEL
-#define MKS_MINI_12864
-</code></pre></div>
+<pre><code>//#define MINIPANEL
+//#define MKS_MINI_12864
+
+#define MKS_MINI_12864_V3
+#define NEOPIXEL_LED
+
+    #define NEOPIXEL_TYPE          NEO_RGB
+#define NEOPIXEL_BKGD_ALWAYS_ON
+</code></pre>
 <h4 id="section-extras_1">@section extras<a class="headerlink" href="#section-extras_1" title="Permanent link">#</a></h4>
 <blockquote>
 <p>line 2738</p>
@@ -1657,10 +1676,11 @@
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1669,7 +1689,8 @@
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../machines_general/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Общие заметки по сборке, прошивке и калибровке FDM-принтеров" rel="prev">
@@ -1733,10 +1754,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
