@@ -1330,16 +1330,27 @@ sudo rsync -avP USER@HOST:SRC DST
 <h3 id="how-to-unmask-systemd-service">How to unmask systemd service<a class="headerlink" href="#how-to-unmask-systemd-service" title="Permanent link">#</a></h3>
 <p>Based on <a href="https://unix.stackexchange.com/questions/308904/systemd-how-to-unmask-a-service-whose-unit-file-is-empty">unix.stackexchange</a> answer:</p>
 <ul>
-<li>Check that a file is a symlink to <code>/dev/null</code>:
-  <code>file /etc/systemd/system/my_app.service</code>
-  <code>file /lib/systemd/system/my_app.service</code></li>
-<li>Delete the symlink:
-  <code>sudo rm /etc/systemd/system/your_app.service</code></li>
-<li>Reload systemd daemon as you changed a service:
-  <code>sudo systemctl daemon-reload</code></li>
-<li>Check service status:
-  <code>systemctl status my_app</code></li>
+<li>Check that a file is a symlink to <code>/dev/null</code>:</li>
 </ul>
+<pre><code>file /etc/systemd/system/my_app.service
+</code></pre>
+<pre><code>file /lib/systemd/system/my_app.service
+</code></pre>
+<ul>
+<li>Delete the symlink:</li>
+</ul>
+<pre><code>sudo rm /etc/systemd/system/your_app.service
+</code></pre>
+<ul>
+<li>Reload systemd daemon as you changed a service:</li>
+</ul>
+<pre><code>sudo systemctl daemon-reload
+</code></pre>
+<ul>
+<li>Check service status:</li>
+</ul>
+<pre><code>systemctl status my_app
+</code></pre>
 <h3 id="make-file-executable">Make file executable<a class="headerlink" href="#make-file-executable" title="Permanent link">#</a></h3>
 <p>To make file executable use this command:</p>
 <pre><code>chmod u+x &lt;file&gt;
