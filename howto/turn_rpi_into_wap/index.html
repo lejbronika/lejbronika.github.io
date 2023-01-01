@@ -15,7 +15,7 @@
     
     
       
-        <title>How to turn RPi into WAP - lejbronika</title>
+        <title>Turn RPi into WAP - lejbronika</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-turn-rpi-into-wap" class="md-skip">
+        <a href="#turn-rpi-into-wap" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to turn RPi into WAP
+              Turn RPi into WAP
             
           </span>
         </div>
@@ -770,6 +770,8 @@
         
           
         
+          
+        
       
       
         
@@ -822,12 +824,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to turn RPi into WAP
+          Turn RPi into WAP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to turn RPi into WAP
+        Turn RPi into WAP
       </a>
       
         
@@ -915,6 +917,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../install_win_for_mac_ext_drive/" class="md-nav__link">
+        Install Windows on external drive for Macbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sphinx_to_gh_pages_eng/" class="md-nav__link">
         Publish sphinx-generated docs on GitHub Pages
       </a>
@@ -961,6 +977,10 @@
         
           
             
+          
+        
+          
+        
           
         
           
@@ -1025,8 +1045,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../notes/macos_notes/" class="md-nav__link">
+        MacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../notes/git_notes/" class="md-nav__link">
         GIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/postman_notes/" class="md-nav__link">
+        Postman
       </a>
     </li>
   
@@ -1137,8 +1185,8 @@
 
 
 
-<h1 id="how-to-turn-rpi-into-wap">How to turn RPi into WAP<a class="headerlink" href="#how-to-turn-rpi-into-wap" title="Permanent link">#</a></h1>
-<p>Instruction is based on <a href="https://kali.training/">Kali Revealed</a> course by great guys from Offensive Security team. </p>
+<h1 id="turn-rpi-into-wap">Turn RPi into WAP<a class="headerlink" href="#turn-rpi-into-wap" title="Permanent link">#</a></h1>
+<p>Instruction is based on <a href="https://kali.training/">Kali Revealed</a> course by great guys from Offensive Security team.</p>
 <h2 id="prepare">Prepare<a class="headerlink" href="#prepare" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -1211,7 +1259,7 @@
 <h2 id="install-kali-on-rpi">Install Kali on rpi<a class="headerlink" href="#install-kali-on-rpi" title="Permanent link">#</a></h2>
 <ol>
 <li><a href="https://www.kali.org/get-kali/#kali-arm">Download</a> latest image version from Kali official website.</li>
-<li>Verify checksum. </li>
+<li>Verify checksum.</li>
 <li>Copy downloaded image on microSD card with <code>dd</code> command:</li>
 </ol>
 <pre><code>dd if=kali-image.img of=/dev/something bs=512k status=progress
@@ -1243,12 +1291,12 @@ iface wlan0 inet static
 <ul>
 <li>Restart <code>dhcpcd</code> and reload the configuration of <code>wlan0</code>:</li>
 </ul>
-<pre><code>sudo service dhcpcd restart 
+<pre><code>sudo service dhcpcd restart
 </code></pre>
 <pre><code>sudo ifdown wlan0; sudo ifup wlan0
 </code></pre>
 <ul>
-<li>Configure <code>hostapd</code>: </li>
+<li>Configure <code>hostapd</code>:</li>
 </ul>
 <pre><code>sudo nano /etc/hostapd/hostapd.conf
 </code></pre>
@@ -1350,7 +1398,7 @@ iface wlan0 inet static
 </code></pre>
 <h2 id="configure-dns-forwarding">Configure DNS forwarding<a class="headerlink" href="#configure-dns-forwarding" title="Permanent link">#</a></h2>
 <ul>
-<li>Setup <code>dnsmasq</code>: </li>
+<li>Setup <code>dnsmasq</code>:</li>
 </ul>
 <pre><code>sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 </code></pre>
@@ -1424,7 +1472,7 @@ iface wlan0 inet static
 <pre><code>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 </code></pre>
 <blockquote>
-<p>Append <code>-A</code> rule to the <code>FORWARD</code> <em>chain packets</em> (packets being routed through the Pi) which accepts <code>-j ACCEPT</code> packets from <code>eth0</code> to <code>wlan0</code> - <code>-i eth0 -o wlan0</code> that belong to <code>ESTABLISHED</code> or are <code>RELATED</code> to existing position. </p>
+<p>Append <code>-A</code> rule to the <code>FORWARD</code> <em>chain packets</em> (packets being routed through the Pi) which accepts <code>-j ACCEPT</code> packets from <code>eth0</code> to <code>wlan0</code> - <code>-i eth0 -o wlan0</code> that belong to <code>ESTABLISHED</code> or are <code>RELATED</code> to existing position.</p>
 </blockquote>
 <pre><code>sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 </code></pre>
@@ -1439,7 +1487,7 @@ iface wlan0 inet static
 <pre><code>sudo iptables -S
 </code></pre>
 <ul>
-<li>Save rules to file: </li>
+<li>Save rules to file:</li>
 </ul>
 <pre><code>sudo iptables-save | sudo tee /etc/iptables.ipv4.nat
 </code></pre>
@@ -1459,7 +1507,7 @@ iptables-restore &lt; /etc/iptables.ipv4.nat
 <h2 id="enable-configured-services">Enable configured services<a class="headerlink" href="#enable-configured-services" title="Permanent link">#</a></h2>
 <pre><code>sudo systemctl enable hostapd dnsmasq
 </code></pre>
-<p>Reboot and check that everything works fine. </p>
+<p>Reboot and check that everything works fine.</p>
 
               
             </article>
@@ -1496,13 +1544,13 @@ iptables-restore &lt; /etc/iptables.ipv4.nat
       
       
         
-        <a href="../sphinx_to_gh_pages_eng/" class="md-footer__link md-footer__link--next" aria-label="Next: Publish sphinx-generated docs on GitHub Pages" rel="next">
+        <a href="../install_win_for_mac_ext_drive/" class="md-footer__link md-footer__link--next" aria-label="Next: Install Windows on external drive for Macbook" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Publish sphinx-generated docs on GitHub Pages
+              Install Windows on external drive for Macbook
             </div>
           </div>
           <div class="md-footer__button md-icon">
