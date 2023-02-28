@@ -91,11 +91,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/meltyminds/notes_prusa_slicer/</loc>
-         <lastmod>2023-02-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://example.com/meltyminds/projects_freeplaytech_rpi0w_gba/</loc>
          <lastmod>2023-02-28</lastmod>
          <changefreq>daily</changefreq>
@@ -107,11 +102,6 @@
     </url>
     <url>
          <loc>https://example.com/notes/</loc>
-         <lastmod>2023-02-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://example.com/notes/abbreviations/</loc>
          <lastmod>2023-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
