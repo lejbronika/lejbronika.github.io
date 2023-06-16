@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://example.com/notes/git_notes/">
+        <link rel="canonical" href="https://example.com/notes/doc_dev_notes/">
       
       
-        <link rel="prev" href="../macos_notes/">
-      
-      
-        <link rel="next" href="../postman_notes/">
       
       <link rel="icon" href="../../media/identity/endless-favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-notes" class="md-skip">
+        <a href="#ruby" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GIT
+              Doc dev notes
             
           </span>
         </div>
@@ -240,15 +236,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link">
         Notes
       </a>
     </li>
@@ -695,16 +689,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
         
@@ -735,7 +727,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Notes
@@ -790,66 +782,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          GIT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../git_notes/" class="md-nav__link">
         GIT
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-rename-folder" class="md-nav__link">
-    How to rename folder
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-delete-all-merged-local-branches" class="md-nav__link">
-    How to delete all merged local branches
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#used-commands" class="md-nav__link">
-    Used commands
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -892,8 +829,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -902,22 +837,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-rename-folder" class="md-nav__link">
-    How to rename folder
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-delete-all-merged-local-branches" class="md-nav__link">
-    How to delete all merged local branches
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#used-commands" class="md-nav__link">
-    Used commands
+  <a href="#ruby" class="md-nav__link">
+    Ruby
   </a>
   
 </li>
@@ -937,33 +858,31 @@
                   
   
 
-  <nav class="md-tags" >
-    
-      
-      
-        <a href="../../tags/#git" class="md-tag">git</a>
-      
-    
-  </nav>
 
 
 
+  <h1>Doc dev notes</h1>
 
-<h1 id="git-notes">GIT Notes<a class="headerlink" href="#git-notes" title="Permanent link">#</a></h1>
-<h2 id="how-to-rename-folder">How to rename folder<a class="headerlink" href="#how-to-rename-folder" title="Permanent link">#</a></h2>
-<pre><code>git mv path_to_ff/oldName temp &amp;&amp; git mv temp path_to_ff/newName
-</code></pre>
-<p>followed by <code>git commit</code> and <code>git push</code>.</p>
-<h2 id="how-to-delete-all-merged-local-branches">How to delete all merged local branches<a class="headerlink" href="#how-to-delete-all-merged-local-branches" title="Permanent link">#</a></h2>
-<pre><code>git branch --merged | grep -v \* | xargs git branch -D
-</code></pre>
-<h2 id="used-commands">Used commands<a class="headerlink" href="#used-commands" title="Permanent link">#</a></h2>
-<pre><code>git commit --no-verify
-</code></pre>
-<pre><code>git push origin --delete branch_name
-</code></pre>
-<pre><code>git reset --hard commit_hash
-</code></pre>
+<h2 id="ruby">Ruby<a class="headerlink" href="#ruby" title="Permanent link">#</a></h2>
+<p>If you need to have ruby first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' &gt;&gt; ~/.zshrc</p>
+<p>For compilers to find ruby you may need to set:
+  export LDFLAGS="-L/usr/local/opt/ruby/lib"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include"</p>
+<p>For pkg-config to find ruby you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"</p>
+<p><a href="https://mac.install.guide/ruby/9.html">Install Ruby on macOS</a></p>
+<ul>
+<li>Check where <code>ruby</code> is installed:</li>
+</ul>
+<p><code>which ruby</code></p>
+<ul>
+<li>Should NOT be <code>/usr/bin/ruby</code> - system <code>ruby</code> version.</li>
+<li>Install <code>ruby gem</code> locally:</li>
+</ul>
+<p><code>sudo gem install gollum --user-install</code></p>
+<p>https://github.com/gollum/gollum/wiki/Installation</p>
+<p>~/.gem/ruby/3.2.0/bin/gollum huntbox-documentation.wiki --base-path wiki</p>
 
 
 
