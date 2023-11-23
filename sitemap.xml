@@ -2,152 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lejbronika.github.io/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/glossary/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/tags/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/collections/links_best_release_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/build_own_iso/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/create_linux_live_usb/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/install_win_for_mac_ext_drive/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/sphinx_to_gh_pages_en/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/howto/turn_rpi_into_wap/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/articles_ru_choosing_cad_software_formlabs/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/articles_ru_design_parts_for_sla_printing/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lejbronika.github.io/meltyminds/lab_notes/</loc>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/machines_black_widow_log/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/machines_general/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/machines_r2d2_log/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/manuals_mm_security/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/manuals_msla_print/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/notes_gcode/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/notes_octoprint/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/projects_freeplaytech_rpi0w_gba/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/meltyminds/projects_smartable/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/doc_dev_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/git_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/linux_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/macos_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/postman_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lejbronika.github.io/notes/rpi_notes/</loc>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/notes/win_notes/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lejbronika.github.io/tags/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
