@@ -1,0 +1,20 @@
+@media screen{ 
+  .md-typeset .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+}
+
+.md-chip {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    border-radius: 16px;
+    background-color: #e0e0e0;
+    font-size: 0.875em;
+    color: #333;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+      /* External margin to avoid collision with other elements */
+    border: 1px solid #ccc;  /* Subtle border to separate from surrounding content */
+}
