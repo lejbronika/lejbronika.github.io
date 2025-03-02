@@ -30,3 +30,13 @@
 table td, table th {
   vertical-align: middle !important;  /* Vertically center the content */
 }
+
+h3 img {
+  width: 24px;
+  height: 24px !important;
+}
+
+td a img {
+  width: 128px !important;
+  height: 64px;
+}
