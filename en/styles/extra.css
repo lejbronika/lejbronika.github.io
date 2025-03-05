@@ -1,0 +1,42 @@
+@media screen{ 
+  .md-typeset .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+}
+
+/* Default .md-chip styles (Light Theme) */
+.md-chip {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 16px;
+  font-size: 0.875em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  margin-right: 0.1em;
+  margin-left: 0.1em;
+  border: 1px solid #d1d1d1;  /* Neutral light gray border */
+  background-color: #f4f4f4;  /* Very light gray background for light theme */
+  color: #333;  /* Dark text for readability */
+}
+
+/* Conditional styles based on the "slate" color scheme */
+[data-md-color-scheme="slate"] .md-chip {
+  background-color: #d9d9d9;  /* Light neutral gray for slate theme */
+  color: #333;  /* Dark text for readability */
+  border: 1px solid #b3b3b3;  /* Subtle gray border */
+}
+
+/* Apply vertical centering to table cells */
+table td, table th {
+  vertical-align: middle !important;  /* Vertically center the content */
+}
+
+h3 img {
+  width: 24px;
+  height: 24px !important;
+}
+
+td a img {
+  width: 128px !important;
+  height: 64px;
+}
