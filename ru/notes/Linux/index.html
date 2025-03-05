@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../MacOS/">
+        <link rel="prev" href="../Windows/">
       
+      
+        <link rel="next" href="../MacOS/">
       
       
       <link rel="icon" href="../../assets/site-logo/endless-favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Postman - lejbronika</title>
+        <title>Linux - lejbronika</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#postman" class="md-skip">
+        <a href="#linux" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Postman
+              Linux
             
           </span>
         </div>
@@ -143,6 +145,32 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/ru/" hreflang="ru" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
     
@@ -476,10 +504,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Linux/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -489,6 +538,212 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-filesystem-hierarchy-standard-fhs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Filesystem Hierarchy Standard (FHS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environmental-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Services configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Services configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-usage-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands usage and examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands usage and examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      rsync
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rsync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#va" class="md-nav__link">
+    <span class="md-ellipsis">
+      VA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-check-disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to check disk space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to check disk space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-host-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change host name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-unmask-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to unmask systemd service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-file-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make file executable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-opacity-to-lxterminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add opacity to Lxterminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-user-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get all user names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-current-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get current shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-activate-shared-folder-in-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to activate shared folder in VMWare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -520,31 +775,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Postman
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Postman/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -554,62 +788,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#writing-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Writing Scripts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javascript-quick-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      JavaScript Quick Reference
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#render-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      Render JSON
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-start-simple-http-server-with-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to start simple HTTP server with python
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -649,38 +827,188 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#writing-scripts" class="md-nav__link">
+  <a href="#the-filesystem-hierarchy-standard-fhs" class="md-nav__link">
     <span class="md-ellipsis">
-      Writing Scripts
+      The Filesystem Hierarchy Standard (FHS)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#javascript-quick-reference" class="md-nav__link">
+  <a href="#environmental-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      JavaScript Quick Reference
+      Environmental variables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#render-json" class="md-nav__link">
+  <a href="#services-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Render JSON
+      Services configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Services configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Tables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-start-simple-http-server-with-python" class="md-nav__link">
+  <a href="#commands-usage-and-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      How to start simple HTTP server with python
+      Commands usage and examples
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Commands usage and examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      rsync
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rsync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#va" class="md-nav__link">
+    <span class="md-ellipsis">
+      VA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-check-disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to check disk space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to check disk space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-host-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change host name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-unmask-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to unmask systemd service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-file-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make file executable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-opacity-to-lxterminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add opacity to Lxterminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-user-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get all user names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-current-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get current shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-activate-shared-folder-in-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to activate shared folder in VMWare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -708,36 +1036,182 @@
 
 
 
-<h1 id="postman">Postman</h1>
+<h1 id="linux">Linux</h1>
+<h2 id="the-filesystem-hierarchy-standard-fhs">The Filesystem Hierarchy Standard (FHS)</h2>
 <ul>
-<li>
-<p><a href="https://www.postman.com/postman/workspace/f1c6b0a9-b930-4165-9aa4-f655dd7051b5/overview">Postman 30 days challenge</a></p>
-</li>
-<li>
-<p><a href="https://learning.postman.com/docs/sending-requests/visualizer/#rendering-html">Render HTML</a> with necessary data specified in test scripts.</p>
-</li>
+<li><code>/bin/</code>: basic programs.</li>
+<li><code>/boot/</code>: Kali Linux kernel and other files required for its early boot process.</li>
+<li><code>/dev/</code>: device files.</li>
+<li><code>/etc/</code>: configuration files.</li>
+<li><code>/home/</code>: user's personal files.</li>
+<li><code>/lib/</code>: basic libraries.</li>
+<li><code>/media/</code>: mount points for removable devices (CD/DVD-ROM, USB keys, and so on).</li>
+<li><code>/mnt/</code>: temporary mount point.</li>
+<li><code>/opt/</code>: extra applications provided by third parties.</li>
+<li><code>/root/</code>: administrator's (root's) personal files.</li>
+<li><code>/run/</code>: volatile runtime data that does not persist across reboots (not yet included in the FHS).</li>
+<li><code>/sbin/</code>: system programs.</li>
+<li><code>/srv/</code>: data used by servers hosted on this system.</li>
+<li><code>/tmp/</code>: temporary files (this directory is often emptied at boot).</li>
+<li><code>/usr/</code>: applications (this directory is further subdivided into bin, sbin, lib according to the same logic as in the root directory) Furthermore, <code>/usr/share/</code> contains architecture-independent data. The <code>/usr/local/</code> directory is meant to be used by the administrator for installing applications manually without overwriting files handled by the packaging system (<code>dpkg</code>).</li>
+<li><code>/var/</code>: variable data handled by services. This includes log files, queues, spools, and caches.</li>
+<li><code>/proc/</code> and <code>/sys/</code> are specific to the Linux kernel (and not part of the FHS). They are used by the kernel for exporting data to user space.</li>
 </ul>
-<h2 id="writing-scripts">Writing Scripts</h2>
-<p><a href="https://learning.postman.com/docs/writing-scripts/intro-to-scripts/">Scripting in Postman</a>:</p>
-<ol>
-<li>Before request is sent to the server - <a href="https://learning.postman.com/docs/writing-scripts/pre-request-scripts/">pre-request scripts</a>.</li>
-<li>After response is received - <a href="https://learning.postman.com/docs/writing-scripts/test-scripts/">test script</a>.</li>
-</ol>
-<h2 id="javascript-quick-reference">JavaScript Quick Reference</h2>
-<p><a href="https://learning.postman.com/docs/writing-scripts/script-references/postman-sandbox-api-reference/">Postman JavaScript Reference</a></p>
+<h2 id="environmental-variables">Environmental variables</h2>
 <ul>
-<li><a href="https://www.w3schools.com/js/js_json_objects.asp">W3S - JS JSON object</a></li>
-<li><a href="https://www.w3schools.com/js/js_loop_forin.asp">W3S - JS For In Loop</a></li>
-<li><a href="https://www.w3schools.com/js/js_arrays.asp#gsc.tab=0">W3S - JS Arrays</a></li>
+<li>System-wide: <code>/etc/profile/</code>.</li>
+<li>Per user: <code>~/.profile</code>.</li>
 </ul>
-<h2 id="render-json">Render JSON</h2>
+<h2 id="services-configuration">Services configuration</h2>
+<h3 id="ssh">SSH</h3>
 <ul>
-<li><a href="https://www.geeksforgeeks.org/how-to-fetch-data-from-json-file-and-display-in-html-table-using-jquery/">HTML + jQuerry example</a></li>
+<li>For safety reasons after installation generate new SSH host keys:</li>
 </ul>
-<h2 id="how-to-start-simple-http-server-with-python">How to start simple HTTP server with python</h2>
-<p>Navigate to project folder and run the following command:</p>
-<pre><code>python3 -m http.server --cgi 8080
+<pre><code>sudo rm /etc/ssh/ssh_host_*
 </code></pre>
+<pre><code>sudo dpkg-reconfigure openssh-server
+</code></pre>
+<ul>
+<li>generate new SSH host keys:</li>
+</ul>
+<pre><code>ssh-keygen
+</code></pre>
+<ul>
+<li>Copy public key to server:</li>
+</ul>
+<pre><code>ssh-copy-id user@host
+</code></pre>
+<ul>
+<li>Update <code>/etc/ssh/ssh_config</code> file:</li>
+</ul>
+<pre><code>Host *
+    StrictModes yes
+    ForwardX11 no
+    ClientAliveInterval 360
+    ClientEmptyPasswords no
+    Protocol 2
+    PermitRootLogin no
+    AllowUsers kali
+    PasswordAuthentication no
+</code></pre>
+<ul>
+<li>Create <code>~/.ssh/config</code> file if necessary:</li>
+</ul>
+<pre><code>Host hostname1
+    SSH_OPTION value
+    SSH_OPTION value
+
+Host hostname2
+    SSH_OPTION value
+
+Host *
+    SSH_OPTION value
+</code></pre>
+<ul>
+<li>update <code>.ssh</code> folder and config file rights:</li>
+</ul>
+<pre><code>chmod 0700 ~/.ssh
+chmod 600 ~/.ssh/config
+</code></pre>
+<h2 id="ip-tables">IP Tables</h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands">iptables essentials</a></p>
+<h2 id="commands-usage-and-examples">Commands usage and examples</h2>
+<h3 id="rsync"><code>rsync</code></h3>
+<p><code>rsync [OPTION...] SRC... [DST...]</code></p>
+<h4 id="flags">Flags</h4>
+<ul>
+<li><code>a</code>: archive mode, or faster way to specify recursion and necessity of preserving everything.</li>
+<li><code>z</code>: compress file data during transfer.</li>
+<li><code>h</code>: human readable.</li>
+<li><code>v</code>: verbose.</li>
+</ul>
+<h4 id="examples">Examples</h4>
+<ul>
+<li>find by date and sync:</li>
+</ul>
+<pre><code>sudo find SRC -type f -newermt DATE_BEGIN ! -newermt DATE_END &gt; files_to_sync.txt
+
+sudo rsync -avP `cat files_to_sync.txt` DST
+
+sudo rsync -avP USER@HOST:SRC DST
+</code></pre>
+<h2 id="va">VA</h2>
+<h2 id="how-to-check-disk-space">How to check disk space</h2>
+<p>To check files and directories usage use the <code>du</code> command. To get info about how much disk space your filesystem is using run <code>df</code> command. Use <code>-h</code> flag to get human readable answer. These commands can be run for particular file or folder or the whole filesystem. </p>
+<h3 id="how-to-change-host-name">How to change host name</h3>
+<p>To change machine name on Linux just edit the <code>/etc/hostname</code> and <code>/etc/hosts</code> files and reboot the system.</p>
+<h3 id="how-to-unmask-systemd-service">How to unmask systemd service</h3>
+<p>Based on <a href="https://unix.stackexchange.com/questions/308904/systemd-how-to-unmask-a-service-whose-unit-file-is-empty">unix.stackexchange</a> answer:</p>
+<ul>
+<li>Check that a file is a symlink to <code>/dev/null</code>:</li>
+</ul>
+<pre><code>file /etc/systemd/system/my_app.service
+</code></pre>
+<pre><code>file /lib/systemd/system/my_app.service
+</code></pre>
+<ul>
+<li>Delete the symlink:</li>
+</ul>
+<pre><code>sudo rm /etc/systemd/system/your_app.service
+</code></pre>
+<ul>
+<li>Reload systemd daemon as you changed a service:</li>
+</ul>
+<pre><code>sudo systemctl daemon-reload
+</code></pre>
+<ul>
+<li>Check service status:</li>
+</ul>
+<pre><code>systemctl status my_app
+</code></pre>
+<h3 id="make-file-executable">Make file executable</h3>
+<p>To make file executable use this command:</p>
+<pre><code>chmod u+x &lt;file&gt;
+</code></pre>
+<h3 id="add-opacity-to-lxterminal">Add opacity to Lxterminal</h3>
+<ul>
+<li>Install <a href="https://github.com/chjj/compton">Compton</a></li>
+</ul>
+<pre><code>sudo apt-get install compton
+</code></pre>
+<ul>
+<li>Use <code>xprop</code> command to get necessary app window properties.</li>
+<li>Search for <code>WM_CLASS(STRING) = APP_NAME</code> property.</li>
+<li>Use found name in <code>class_g</code> argument.</li>
+<li>Add opacity settings for  <code>~/.config/compton.conf</code>:</li>
+</ul>
+<pre><code>sudo 'opacity-rule = [&quot;75:class_g *= 'APP_NAME'&quot;]' &gt; ~/.config/compton.conf
+</code></pre>
+<ul>
+<li>Add <code>compton</code> to <code>~/.config/lxsession/Lubuntu/autostart</code></li>
+</ul>
+<pre><code>sudo 'compton' &gt; ~/.config/lxsession/Lubuntu/autostart
+</code></pre>
+<h3 id="get-all-user-names">Get all user names</h3>
+<p>To get all user names from <code>/etc/passwd</code> use the following command:</p>
+<pre><code>cut -d: -f1 /etc/passwd
+</code></pre>
+<h3 id="get-current-shell">Get current shell</h3>
+<p>To know which shell you are currently running use the following command:</p>
+<pre><code>ps -p $$
+</code></pre>
+<h3 id="how-to-activate-shared-folder-in-vmware">How to activate shared folder in VMWare</h3>
+<p>To activate VMWare shared folder (<a href="https://alexandrerosseto.medium.com/vmware-linux-how-to-share-folder-between-host-and-vm-62e63419ecbb">source article on medium</a>): </p>
+<ul>
+<li>add shared foleder in settings;</li>
+<li>check that folder is in place:</li>
+</ul>
+<p><code>vmware-hgfsclient</code></p>
+<ul>
+<li>create directory inside <code>/mnt/hgfs/</code>:</li>
+</ul>
+<p><code>mkdir /mnt/hgfs/shared</code></p>
+<ul>
+<li>share created dorectory:</li>
+</ul>
+<p><code>sudo vmhgfs-fuse .host:/shared-folder-name /mnt/hgfs/shared -o allow_other -o uid=1000</code></p>
+<p>!!! note 
+  <em>vmtools drivers</em> should be installed to succesfully fulfil the operation. </p>
 
 
 
