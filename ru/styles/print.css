@@ -36,8 +36,7 @@
     line-height: 1.1;
   }
 
-  h1.nav-section-title{
-    page-break-after: always;
+  section:not(#index) {
     page-break-before: always;
   }
 
